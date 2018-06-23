@@ -1,11 +1,10 @@
-# Smart Qrcode Front end 
+# Smart Qrcode Front-End 
 
 ```npm install ```
 
 to start the project on localhost
 
 ```npm start ```
-
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
