@@ -1,6 +1,8 @@
-#### Smart Qrcode Front end 
+# Smart Qrcode Front end 
 
 ```npm install ```
+
+to start the project on localhost
 
 ```npm start ```
 
