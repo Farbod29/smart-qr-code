@@ -157,3 +157,6 @@ div.btn-group {
     margin-top: 30px;
     text-align: right;
 }
+
+
+img.profile-picture { cursor: pointer; }

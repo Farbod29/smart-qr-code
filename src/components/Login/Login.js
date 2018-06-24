@@ -29,9 +29,6 @@ class LoginComponent extends Component {
     render() {
 
         return (
-
-
-
             <div className="App">
                 <Header/>
                 <div className="login-clean">

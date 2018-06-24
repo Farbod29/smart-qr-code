@@ -7,6 +7,7 @@ import Test from "./components/Test";
 import Login from "./components/Login/Login";
 import AddLink from "./components/AddLink/AddLink";
 import Dashboard from  "./components/Dashboard/index";
+import Settings from "./components/Settings/Settings";
 
 class App extends Component {
     state =
@@ -28,6 +29,7 @@ class App extends Component {
                   <Route path="/Dashboard" component={Dashboard}/>
                   <Route path="/login" component={Login}/>
                   <Route path="/AddLink" component={AddLink}/>
+                  <Route path="/settings" component={Settings}/>
                   <Route path="/emaam" component={Dashboard}/>
               </div>
           </BrowserRouter>
