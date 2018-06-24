@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import logo from '/Users/farbodaprin/Desktop/smartqr/src/images/logo2.png';
 import './App.css';
-import Dashboard from "./Components/Dashboard";
+import {BrowserRouter, Route} from "react-router-dom";
+import './general.css';
+import Test from "./components/Test";
+import Login from "./components/Login/Login";
+import AddLink from "./components/AddLink/AddLink";
+import Dashboard from  "./components/Dashboard/index";
 
 class App extends Component {
     state =
@@ -12,17 +17,23 @@ class App extends Component {
             //     ],
         };
   render() {
-    return (
-      <div className="App">
-
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Dashboard</h1>
-        <p className="App-intro">
-            <Dashboard/>
-        </p>
-      </div>
-    );
+      return (<div className="p-3 mb-2 bg-light text-dark">
+          <BrowserRouter>
+              <div className="sans-serif">
+                  <img src={logo} className="App-logo" alt="logo" />
+                  <Route exact path="/" component={Test}/>
+                  <Route path="/home" component={Test}/>
+                  <Route path="/Dashboard" component={Dashboard}/>
+                  <Route path="/login" component={Login}/>
+                  <Route path="/AddLink" component={AddLink}/>
+                  <Route path="/emaam" component={Dashboard}/>
+              </div>
+          </BrowserRouter>
+      </div>);
   }
 }
 
 export default App;
+
+
+

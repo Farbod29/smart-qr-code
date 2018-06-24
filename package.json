@@ -4,9 +4,13 @@
   "private": true,
   "dependencies": {
     "ajv": "^6.5.1",
-    "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-router": "^4.3.1",
+    "@material-ui/core": "^1.2.3",
+    "@material-ui/icons": "^1.1.0",
+    "react": "^16.4.1",
+    "react-router-bootstrap": "^0.24.4",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4"
   },
   "scripts": {
@@ -14,5 +18,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.0.0-beta",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
   }
 }

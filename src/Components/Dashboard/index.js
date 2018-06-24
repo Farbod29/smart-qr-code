@@ -11,19 +11,34 @@ class Dashboard extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {isOpen: false};
+        this.state = {isOpen: true};
     }
-
     render() {
         return (
             <div>
-                <button onClick={this.toggleModal}>
-                    Open the card
-                </button>
                 <Cards show={this.state.isOpen}
                        onClose={this.toggleModal}>
-                   <h1>www.ude.moodle.com</h1>
-                   <p> here is the card</p>
+                    <h5>www.ude.moodle.com</h5>
+                    <p> here is the card</p>
+                    {/*<button onClick={this.toggleModal}>*/}
+                        {/*Open the card*/}
+                    {/*</button>*/}
+                </Cards>
+                <Cards show={this.state.isOpen}
+                       onClose={this.toggleModal}>
+                    <h5>www.ude.moodle.com</h5>
+                    <p> here is the card</p>
+                    {/*<button onClick={this.toggleModal}>*/}
+                    {/*Open the card*/}
+                    {/*</button>*/}
+                </Cards>
+                <Cards show={this.state.isOpen}
+                       onClose={this.toggleModal}>
+                    <h5>www.ude.moodle.com</h5>
+                    <p> here is the card</p>
+                    {/*<button onClick={this.toggleModal}>*/}
+                    {/*Open the card*/}
+                    {/*</button>*/}
                 </Cards>
             </div>
         );
@@ -31,3 +46,17 @@ class Dashboard extends Component {
 }
 
 export default Dashboard;
+
+
+{/*<div className="App">*/
+}
+{/*<h1 className="App-title">Dashboard</h1>*/
+}
+{/*<p className="App-intro">*/
+}
+{/*<Dashboard/>*/
+}
+{/*</p>*/
+}
+{/*</div>*/
+}
