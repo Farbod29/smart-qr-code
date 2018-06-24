@@ -42,9 +42,9 @@ class Header extends Component {
                                     </LinkContainer>
                                 </li>
                                 <li className="nav-item ">
-                                    <LinkContainer to="/Register">
+                                    <LinkContainer to="/AddLink">
                                         <a className="nav-link text-dark font-weight-bold">
-                                            Settings
+                                            Add Reference
                                         </a>
                                     </LinkContainer>
                                 </li>
