@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Header from "./Header/Header";
-import TestComponent from "./TestComponent";
+//import TestComponent from "./TestComponent";
 
 class Test extends Component {
     render() {

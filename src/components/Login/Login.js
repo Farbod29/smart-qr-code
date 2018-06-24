@@ -1,4 +1,8 @@
 import React, {Component} from 'react';
+import Button from "@material-ui/core/es/Button/Button";
+import TextField from "@material-ui/core/es/TextField/TextField";
+import Header from "../Header/Header";
+import {LinkContainer} from "react-router-bootstrap";
 
 
 class LoginComponent extends Component {
@@ -26,30 +30,53 @@ class LoginComponent extends Component {
 
         return (
 
+
+
             <div className="App">
+                <Header/>
                 <div className="login-clean">
                     <form method="post">
                         <h2 className="sr-only">Login Form</h2>
                         <div className="illustration"><i className="icon ion-log-in text-primary"/>
                         </div>
                         <div className="form-group">
-                            <input className="form-control" id="email" type="email" name="email" value={this.state.email}
-                                   onChange={this.handleChange}
-                                   placeholder="enter your email"/>
+                            <TextField
+                                id="email"
+                                label="enter your email"
+                                name="email"
+                                type="email"
+                                value={this.state.email}
+                                onChange={this.handleChange}
+                                margin="normal"
+                                className="form-control"   />
                         </div>
                         <div className="form-group">
-                            <input className="form-control" id="password" type="password" name="password" value={this.state.password}
-                                   onChange={this.handleChange}
-                                   placeholder="enter your password"/>
+                            <TextField
+                                id="password"
+                                label="enter your password"
+                                name="password"
+                                type="password"
+                                value={this.state.password}
+                                onChange={this.handleChange}
+                                margin="normal"
+                                className="form-control"   />
                         </div>
                         <div className="form-group">
-                            <button className="btn btn-outline-primary btn-block" type="submit" disabled={!this.validateForm()}>
-                              Login
-                            </button>
+                            <Button variant="contained" color="primary" type="submit"  disabled={!this.validateForm()}>
+                               Login
+                            </Button>
                         </div>
-                        <a href="/register" className="forgot" style={{ color: '#B22222' }}>
-                           "forget my password"
-                        </a>
+                        <LinkContainer to="/forgetPass" style={{ color: '#B22222' }}>
+                            <a>
+                                Forget my password
+                            </a>
+                        </LinkContainer>
+                    <br/>
+                        <LinkContainer to="/register" style={{ color: '#3267b2' }}>
+                            <a>
+                                Create Account
+                            </a>
+                        </LinkContainer>
                     </form>
                 </div>
             </div>
