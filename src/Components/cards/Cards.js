@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Cards.css';
+import profile from '/Users/farbodaprin/Desktop/smartqr/src/images/img_avatar.png';
 
 class Cards extends React.Component {
     render() {
@@ -8,21 +9,22 @@ class Cards extends React.Component {
         if (!this.props.show) {
             return null;
         }
-
-        // The gray background
         return (
-            <div className="backdropStyle">
-                <div className="cardStyle">
-                    {this.props.children}
-                        <button onClick={this.props.onClose}>
-                            Close
+            <div className="card" >
+                <img src={profile} className="image" />
+                <div className="container">
+                        {this.props.children}
+                        <button>
+                            Like
                         </button>
-                    </div>
+                        <button onClick={this.props.onClose}>
+                        Unlike
+                        </button>
                 </div>
+            </div>
         );
     }
 }
-
 Cards.propTypes = {
     onClose: PropTypes.func.isRequired,
     show: PropTypes.bool,

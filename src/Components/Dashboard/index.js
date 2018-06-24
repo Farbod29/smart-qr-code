@@ -22,8 +22,8 @@ class Dashboard extends Component {
                 </button>
                 <Cards show={this.state.isOpen}
                        onClose={this.toggleModal}>
-                    www.ude.moodle.com
-                    Here's some content for the Cards
+                   <h1>www.ude.moodle.com</h1>
+                   <p> here is the card</p>
                 </Cards>
             </div>
         );

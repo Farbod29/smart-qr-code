@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo2.png';
+import logo from '/Users/farbodaprin/Desktop/smartqr/src/images/logo2.png';
 import './App.css';
 import Dashboard from "./Components/Dashboard";
 
