@@ -49,9 +49,9 @@ class Header extends Component {
                                     </LinkContainer>
                                 </li>
                                 <li className="nav-item ">
-                                    <LinkContainer to="/Messages">
+                                    <LinkContainer to="/Login">
                                         <a className="nav-link text-dark font-weight-bold">
-                                            Logout
+                                            Login
                                         </a>
                                     </LinkContainer>
                                 </li>
