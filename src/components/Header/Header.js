@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {LinkContainer} from "react-router-bootstrap";
 
 // styles
-// import "../../../node_modules/jquery/dist/jquery.min.js";
-// import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-// import "../../../node_modules/bootstrap/dist/js/bootstrap.min.js";
+// import "../../node_modules/jquery/dist/jquery.min.js";
+// import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
 
 class Header extends Component {
     render() {
@@ -44,7 +44,7 @@ class Header extends Component {
                                 <li className="nav-item ">
                                     <LinkContainer to="/Register">
                                         <a className="nav-link text-dark font-weight-bold">
-                                           Settings
+                                            Settings
                                         </a>
                                     </LinkContainer>
                                 </li>
