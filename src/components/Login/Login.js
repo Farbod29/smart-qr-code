@@ -39,7 +39,8 @@ class LoginComponent extends Component {
                         <div className="form-group">
                             <TextField
                                 id="email"
-                                label="enter your email"
+                                label="Email"
+                                placeholder="type your email"
                                 name="email"
                                 type="email"
                                 value={this.state.email}
@@ -50,7 +51,8 @@ class LoginComponent extends Component {
                         <div className="form-group">
                             <TextField
                                 id="password"
-                                label="enter your password"
+                                label="Password"
+                                placeholder="type your password"
                                 name="password"
                                 type="password"
                                 value={this.state.password}
@@ -69,7 +71,7 @@ class LoginComponent extends Component {
                             </a>
                         </LinkContainer>
                     <br/>
-                        <LinkContainer to="/register" style={{ color: '#3267b2' }}>
+                        <LinkContainer to="/Register" style={{ color: '#3267b2' }}>
                             <a>
                                 Create Account
                             </a>

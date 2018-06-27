@@ -16,9 +16,46 @@ function Transition(props) {
 
 class Settings extends Component {
 
-    state = {
-        open: false,
-    };
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            open: false,
+            oldPassword: "",
+            newPassword: "",
+            confirmNewPassword: "",
+            validating: false,
+            validatingConfirmNewPass: false,
+        };
+    }
+
+    handleChange = event => {
+        this.setState({
+            [event.target.id]: event.target.value
+        });
+    }
+
+    validateForm() {
+        return this.state.validatingConfirmNewPass == true && this.state.oldPassword.length > 0 && this.state.newPassword.length > 0 && this.state.confirmNewPassword.length > 0;
+    }
+
+    isConfirmedPassword() {
+        this.state.validating = true;
+    }
+
+    renderPasswordConfirmError= event => {
+
+        if (this.state.validating && this.state.newPassword !== this.state.confirmNewPassword) {
+            this.state.validatingConfirmNewPass = false;
+            return (
+                <div>
+                    <label id="validConfirmPass" className="error" ref="errorMsg" style={{color: "#ff0834", fontSize:"small", float:"left"}} >Not match! Please rewrite the same password.</label>
+                </div>
+            );
+        }
+        else
+            this.state.validatingConfirmNewPass = true ;
+    }
 
     handleClickOpen = () => {
         this.setState({ open: true });
@@ -48,37 +85,48 @@ class Settings extends Component {
                          src={"https://sarahahstorage.blob.core.windows.net/files/cce0f00c-31b7-4caa-9bfa-5cf8fcef685e.jpg"}/>
 
                     <h4 className="mt-3">
-                        Hasan Mhd Amin
+                        SmartQRcode Group
                     </h4>
                     <a href="#" className="text-primary font-weight-bold">
-                        hasan.mhd-amin@stud.uni-due.de
+                        xxx@stud.uni-due.de
                     </a>
                     <TextField
-                        id="old-password"
+                        id="oldPassword"
                         label="Old Password"
+                        name="oldPassword"
                         placeholder="type your old password"
                         margin="normal"
                         type="password"
+                        value={this.state.oldPassword}
+                        onChange={this.handleChange}
                         className="form-control"
                     />
                     <TextField
-                        id="new-password"
+                        id="newPassword"
                         label="New Password"
+                        name="newPassword"
                         placeholder="type your new password"
                         margin="normal"
                         type="password"
+                        value={this.state.newPassword}
+                        onChange={this.handleChange}
                         className="form-control"
                     />
                     <TextField
-                        id="title"
+                        id="confirmNewPassword"
                         label="New Password Confirmation"
+                        name="confirmNewPassword"
                         placeholder="please rewrite your new password"
                         margin="normal"
                         type="password"
+                        value={this.state.confirmNewPassword}
+                        onChange={this.handleChange}
+                        onFocus={this.isConfirmedPassword.bind(this)}
                         className="form-control"
                     />
+                    {this.renderPasswordConfirmError()}
                     <div className="btn mt-2">
-                        <Button variant="contained" color="primary" type="submit">
+                        <Button variant="contained" color="primary" type="submit" disabled={!this.validateForm()}>
                             Change Password
                         </Button>
                     </div>
