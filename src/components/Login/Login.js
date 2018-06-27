@@ -65,9 +65,9 @@ class LoginComponent extends Component {
                                Login
                             </Button>
                         </div>
-                        <LinkContainer to="/forgetPass" style={{ color: '#B22222' }}>
+                        <LinkContainer to="/ForgotPassword" style={{ color: '#B22222' }}>
                             <a>
-                                Forget my password
+                                Forgot my password
                             </a>
                         </LinkContainer>
                     <br/>
