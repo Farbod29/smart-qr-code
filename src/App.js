@@ -22,8 +22,7 @@ class App extends Component {
       return <div className="App">
           <BrowserRouter>
               <div className="sans-serif">
-                  {/*<img src={logo} className="App-logo" alt="logo" />*/}
-
+                  <Route exact path="/" component={Login}/>
                   <Route path="/ForgotPassword" component={ForgotPassword}/>
                   <Route path="/Dashboard" component={Dashboard}/>
                   <Route path="/login" component={Login}/>
