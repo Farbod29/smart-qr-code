@@ -70,7 +70,7 @@ class AddLink extends Component {
                             <br/>
                         </div>
                     </form>
-                </div>
+                </div> 
             </div>
         );
     }
