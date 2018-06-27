@@ -27,7 +27,7 @@ class AddLink extends Component {
         });
     }
 
-    render() {  
+    render() {
         return (
             <div className="App">
 
