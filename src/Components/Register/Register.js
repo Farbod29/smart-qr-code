@@ -37,7 +37,7 @@ class RegisterComponent extends Component {
             this.state.validatingConfirmPass = false;
             return (
                 <div>
-                    <label id="validConfirmPass" className="error" ref="errorMsg" style={{color: "#ff0834", fontSize:"small", float:"left"}} >Not match! enter the same password again.</label>
+                    <label id="validConfirmPass" className="error" ref="errorMsg" style={{color: "#ff0834", fontSize:"small", float:"left"}} >Not match! Please rewrite the same password.</label>
                 </div>
             );
         }
@@ -56,7 +56,8 @@ class RegisterComponent extends Component {
                     <div className="form-group">
                         <TextField
                             id="email"
-                            label="enter your email"
+                            label="Email"
+                            placeholder="type your email"
                             name="email"
                             type="email"
                             value={this.state.email}
@@ -67,7 +68,8 @@ class RegisterComponent extends Component {
                     <div className="form-group">
                         <TextField
                             id="password"
-                            label="enter your password"
+                            label="Password"
+                            placeholder="type your password"
                             name="password"
                             type="password"
                             value={this.state.password}
@@ -78,7 +80,8 @@ class RegisterComponent extends Component {
                     <div className="form-group">
                         <TextField
                             id="confirmPassword"
-                            label="repeat your password"
+                            label="Password Confirmation"
+                            placeholder= "repeat your password"
                             name="confirmPassword"
                             type="password"
                             value={this.state.confirmPassword}
