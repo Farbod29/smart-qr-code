@@ -22,7 +22,7 @@ class App extends Component {
       return <div className="App">
           <BrowserRouter>
               <div className="sans-serif">
-                  <Route exact path="/" component={Login}/>
+                  <Route exact path="/" component={Login}/>  {/*this is a main entry .. we will change it later .. but i write it now to don't show a blank page in the start of the project*/}
                   <Route path="/ForgotPassword" component={ForgotPassword}/>
                   <Route path="/Dashboard" component={Dashboard}/>
                   <Route path="/login" component={Login}/>
