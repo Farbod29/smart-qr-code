@@ -29,9 +29,6 @@ class LoginComponent extends Component {
     render() {
 
         return (
-
-
-
             <div className="App">
                 <Header/>
                 <div className="login-clean">
@@ -72,7 +69,7 @@ class LoginComponent extends Component {
                             </a>
                         </LinkContainer>
                     <br/>
-                        <LinkContainer to="/register" style={{ color: '#3267b2' }}>
+                        <LinkContainer to="/Register" style={{ color: '#3267b2' }}>
                             <a>
                                 Create Account
                             </a>
