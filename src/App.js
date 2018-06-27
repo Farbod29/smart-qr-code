@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter, Route} from "react-router-dom";
 import './general.css';
-import Test from "./components/Test";
 import Login from "./components/Login/Login";
 import AddLink from "./components/AddLink/AddLink";
 import Dashboard from  "./components/Dashboard/index";
 import Settings from "./components/Settings/Settings";
 import Register from "./components/Register/Register";
+import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 
 class App extends Component {
     state =
@@ -19,14 +19,12 @@ class App extends Component {
             //     ],
         };
   render() {
-      return (
-
-          <div className="App">
+      return <div className="App">
           <BrowserRouter>
               <div className="sans-serif">
                   {/*<img src={logo} className="App-logo" alt="logo" />*/}
-                  <Route exact path="/" component={Test}/>
-                  <Route path="/home" component={Test}/>
+
+                  <Route path="/ForgotPassword" component={ForgotPassword}/>
                   <Route path="/Dashboard" component={Dashboard}/>
                   <Route path="/login" component={Login}/>
                   <Route path="/AddLink" component={AddLink}/>
@@ -35,7 +33,7 @@ class App extends Component {
                   <Route path="/Register" component={Register}/>
               </div>
           </BrowserRouter>
-      </div>);
+      </div>;
   }
 }
 
