@@ -9,6 +9,7 @@ import Dashboard from  "./components/Dashboard/index";
 import Settings from "./components/Settings/Settings";
 import Register from "./components/Register/Register";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
+import DashboardTest from "./components/DashboardTest/DashboardTest";
 
 class App extends Component {
     state =
@@ -25,6 +26,7 @@ class App extends Component {
                   <Route exact path="/" component={Login}/>  {/*this is a main entry .. we will change it later .. but i write it now to don't show a blank page in the start of the project*/}
                   <Route path="/ForgotPassword" component={ForgotPassword}/>
                   <Route path="/Dashboard" component={Dashboard}/>
+                  <Route path="/DashboardTest" component={DashboardTest}/>
                   <Route path="/login" component={Login}/>
                   <Route path="/AddLink" component={AddLink}/>
                   <Route path="/settings" component={Settings}/>
