@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
-import Header from "../Header/Header";
 import Card from "@material-ui/core/es/Card/Card";
 import CardMedia from "@material-ui/core/es/CardMedia/CardMedia";
 import CardContent from "@material-ui/core/es/CardContent/CardContent";
 import Typography from "@material-ui/core/es/Typography/Typography";
 import CardActions from "@material-ui/core/es/CardActions/CardActions";
-import ImgTest from '../../images/img_avatar.png';
 import IconButton from "@material-ui/core/es/IconButton/IconButton";
 import {getLinkPreviewData} from "../../utils/Connection";
 
@@ -20,7 +18,7 @@ class ReferenceCard extends Component {
             title: "",
             disc: "",
             imgURL: "",
-            url: "",
+            url: props.url,
         };
     }
 
@@ -40,7 +38,7 @@ class ReferenceCard extends Component {
     }
 
     componentDidMount() {
-        this.getLinkPreviewData("https://www.youtube.com/watch?v=ul4z6sLnXYY");
+        this.getLinkPreviewData(this.state.url);
     }
 
     render() {
@@ -53,9 +51,7 @@ class ReferenceCard extends Component {
         };
 
         return (
-            <div className="App">
-
-                <Header/>
+            <div >
 
                 {this.state.isUrlDataFetched ? (
                     <Card style={card} className="m-5">

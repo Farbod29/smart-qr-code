@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {LinkContainer} from "react-router-bootstrap";
+import ReferencesDashboard from "../DashboardTest/ReferencesDashboard";
 
 // styles
 // import "../../node_modules/jquery/dist/jquery.min.js";
@@ -35,7 +36,7 @@ class Header extends Component {
                                     </LinkContainer>
                                 </li>
                                 <li className="nav-item">
-                                    <LinkContainer to="/DashboardTest">
+                                    <LinkContainer to="/ReferencesDashboard">
                                         <a className="nav-link text-dark font-weight-bold">
                                             Dashboard 2
                                         </a>
