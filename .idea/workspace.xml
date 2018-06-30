@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ce1c8ff-45f9-4447-9236-81d0f799285f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddLink/AddLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddLink/AddLink.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/DashboardTest/ReferencesDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DashboardTest/ReferencesDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DashboardTest/ResourceCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DashboardTest/ResourceCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/general.css" afterDir="false" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,23 +14,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ReferencesDashboard.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReferencesDashboard.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/DashboardTest/ReferencesDashboard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="-34">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="general.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/general.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="164" column="22" selection-start-line="164" selection-start-column="1" selection-end-line="164" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -39,20 +29,17 @@
       <file leaf-file-name="ResourceCard.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/DashboardTest/ResourceCard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
+            <state relative-caret-position="-17">
               <caret line="65" column="42" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddLink.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AddLink.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/AddLink/AddLink.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="65" column="53" lean-forward="true" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="63" />
+            <state relative-caret-position="654">
+              <caret line="51" selection-start-line="51" selection-end-line="53" selection-end-column="38" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -72,6 +59,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>https://cors-anywhere.herokuapp.com/</find>
+      <find>handleChange</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -81,7 +69,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/components/AddLink/AddLink.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/DashboardTest/DashboardTest.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
@@ -91,9 +78,10 @@
         <option value="$PROJECT_DIR$/src/utils/Connection.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/src/components/Settings/Settings.js" />
+        <option value="$PROJECT_DIR$/src/components/DashboardTest/ReferencesDashboard.js" />
         <option value="$PROJECT_DIR$/src/general.css" />
         <option value="$PROJECT_DIR$/src/components/DashboardTest/ResourceCard.js" />
-        <option value="$PROJECT_DIR$/src/components/DashboardTest/ReferencesDashboard.js" />
+        <option value="$PROJECT_DIR$/src/components/AddLink/AddLink.js" />
       </list>
     </option>
   </component>
@@ -220,12 +208,12 @@
       <option name="presentableId" value="Default" />
       <updated>1529751654476</updated>
       <workItem from="1529751656075" duration="230000" />
-      <workItem from="1530137612725" duration="37423000" />
+      <workItem from="1530137612725" duration="39914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44471000" />
+    <option name="totallyTimeSpent" value="46962000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -615,37 +603,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/AddLink/AddLink.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="65" column="53" lean-forward="true" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/general.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="164" column="22" selection-start-line="164" selection-start-column="1" selection-end-line="164" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DashboardTest/ResourceCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="65" column="42" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="178">
+          <caret line="179" column="21" selection-start-line="179" selection-start-column="21" selection-end-line="179" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/DashboardTest/ReferencesDashboard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        <state relative-caret-position="-34">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DashboardTest/ResourceCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="65" column="42" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/AddLink/AddLink.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="51" selection-start-line="51" selection-end-line="53" selection-end-column="38" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
