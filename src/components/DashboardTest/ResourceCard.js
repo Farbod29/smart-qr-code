@@ -7,6 +7,7 @@ import CardActions from "@material-ui/core/es/CardActions/CardActions";
 import IconButton from "@material-ui/core/es/IconButton/IconButton";
 import {parseUrlData} from "../../utils/Connection";
 import NoImagePreview from '../../images/no-preview.jpg';
+import {GridLoader} from "react-spinners";
 
 
 class ResourceCard extends Component {
@@ -45,12 +46,16 @@ class ResourceCard extends Component {
     render() {
         const card = {
             width: 268,
-            minHeight: 200,
+            minHeight: 268,
             // height: 400,
         };
         const media = {
             height: 0,
             paddingTop: '56.25%', // 16:9
+        };
+
+        const loader = {
+            margin: 105,
         };
 
         let finalImageURL = this.state.imgURL;
@@ -103,7 +108,13 @@ class ResourceCard extends Component {
                 ) : (
                     <div>
                         <Card style={card}>
-                            <label>loading . . . </label>
+                            <div className="text-center" style={loader} >
+                                <GridLoader
+                                    color={'#0098d3'}
+                                    loading={true}
+                                />
+                            </div>
+
                         </Card>
                     </div>
                 )}

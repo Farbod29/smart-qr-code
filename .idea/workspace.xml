@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ce1c8ff-45f9-4447-9236-81d0f799285f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/AddLink/AddLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddLink/AddLink.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DashboardTest/ReferencesDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DashboardTest/ReferencesDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/general.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DashboardTest/ResourceCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DashboardTest/ResourceCard.js" afterDir="false" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,20 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ResourceCard.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ResourceCard.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/DashboardTest/ResourceCard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="65" column="42" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddLink.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/AddLink/AddLink.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
-              <caret line="51" selection-start-line="51" selection-end-line="53" selection-end-column="38" />
+            <state relative-caret-position="338">
+              <caret line="37" column="15" lean-forward="true" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -72,7 +64,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/DashboardTest/DashboardTest.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/Header/Header.js" />
         <option value="$PROJECT_DIR$/src/App.css" />
         <option value="$PROJECT_DIR$/src/components/DashboardTest/ReferenceCard.js" />
         <option value="$PROJECT_DIR$/src/utils/Connection.js" />
@@ -80,8 +71,9 @@
         <option value="$PROJECT_DIR$/src/components/Settings/Settings.js" />
         <option value="$PROJECT_DIR$/src/components/DashboardTest/ReferencesDashboard.js" />
         <option value="$PROJECT_DIR$/src/general.css" />
-        <option value="$PROJECT_DIR$/src/components/DashboardTest/ResourceCard.js" />
         <option value="$PROJECT_DIR$/src/components/AddLink/AddLink.js" />
+        <option value="$PROJECT_DIR$/src/components/Header/Header.js" />
+        <option value="$PROJECT_DIR$/src/components/DashboardTest/ResourceCard.js" />
       </list>
     </option>
   </component>
@@ -154,6 +146,13 @@
               <item name="smart-qr-code" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smart-qr-code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smart-qr-code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Settings" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -208,12 +207,12 @@
       <option name="presentableId" value="Default" />
       <updated>1529751654476</updated>
       <workItem from="1529751656075" duration="230000" />
-      <workItem from="1530137612725" duration="39914000" />
+      <workItem from="1530137612725" duration="42401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46962000" />
+    <option name="totallyTimeSpent" value="49449000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -511,16 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="38" column="75" selection-start-line="38" selection-start-column="75" selection-end-line="38" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -620,10 +609,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DashboardTest/ResourceCard.js">
+    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="65" column="42" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="42" />
+        <state relative-caret-position="246">
+          <caret line="34" column="44" lean-forward="true" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -631,6 +623,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="654">
           <caret line="51" selection-start-line="51" selection-end-line="53" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DashboardTest/ResourceCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="37" column="15" lean-forward="true" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
