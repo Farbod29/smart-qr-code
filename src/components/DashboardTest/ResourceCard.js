@@ -71,12 +71,15 @@ class ResourceCard extends Component {
                             />
                             <CardContent>
                                 <a href={this.state.url} target="_blank">
-                                    <Typography gutterBottom variant="headline" component="h2">
+                                    <Typography gutterBottom variant="headline" component="h5">
                                         {this.state.title}
                                     </Typography>
                                 </a>
+                                <label className="text-black-50 small font-weight-bold">
+                                    {this.state.previewLinkData.domain.toUpperCase()}
+                                </label>
                                 <Typography component="p">
-                                    {this.state.disc}
+                                    {this.state.disc.substr(0, 160)}
                                 </Typography>
                             </CardContent>
                             {/*icons from: https://fontawesome.com/icons*/}
