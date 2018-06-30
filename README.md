@@ -6,8 +6,9 @@ to start the project on localhost
 
 ```npm start ```
 
+## here is the Architechure of SmartQr beta !
+![7869825b-da58-48db-8d51-2572b676dd5c](https://user-images.githubusercontent.com/17232450/42126929-0171582a-7c90-11e8-89ef-2a88ee668299.jpg)
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
