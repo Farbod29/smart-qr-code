@@ -6,7 +6,7 @@ import ResourceCard from "./ResourceCard";
 class ReferencesDashboard extends Component {
     render() {
         return (
-            <div className="App">
+            <div className="App container">
 
 
                 <Header/>
@@ -17,7 +17,7 @@ class ReferencesDashboard extends Component {
                 {/*<ReferenceCard url="https://www.youtube.com/watch?v=oa9cnWTpqP8"/>*/}
                 {/*</div>*/}
 
-                <div className="row mt-5 row-centered" id="card-container">
+                <div className="row" id="card-container">
                     <ResourceCard url="https://github.com/facebook/react"/>
                     <ResourceCard url="https://www.youtube.com/watch?v=KMX1mFEmM3E"/>
                     <ResourceCard url="https://material-ui.com/demos/cards/#cards"/>

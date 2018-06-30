@@ -44,7 +44,9 @@ class ResourceCard extends Component {
 
     render() {
         const card = {
-            maxWidth: 330,
+            width: 268,
+            minHeight: 200,
+            // height: 400,
         };
         const media = {
             height: 0,
@@ -82,7 +84,7 @@ class ResourceCard extends Component {
                                 <IconButton aria-label="Add to favorites">
                                     <i className="fas fa-angle-double-up text-dark"/>
                                 </IconButton>
-                                <label>7</label>
+                                <label>7+</label>
                                 <IconButton aria-label="Add to favorites">
                                     <i className="fas fa-angle-double-down text-black-50"/>
                                 </IconButton>
@@ -97,9 +99,9 @@ class ResourceCard extends Component {
                     </div>
                 ) : (
                     <div>
-                        <br/><br/><br/><br/><br/><br/><br/><br/>
-
-                        <label>loading . . . </label>
+                        <Card style={card}>
+                            <label>loading . . . </label>
+                        </Card>
                     </div>
                 )}
 
