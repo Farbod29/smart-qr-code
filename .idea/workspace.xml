@@ -39,8 +39,8 @@
       <file leaf-file-name="ResourceCard.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/DashboardTest/ResourceCard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="85" column="41" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
+            <state relative-caret-position="110">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -201,12 +201,12 @@
       <option name="presentableId" value="Default" />
       <updated>1529751654476</updated>
       <workItem from="1529751656075" duration="230000" />
-      <workItem from="1530137612725" duration="32778000" />
+      <workItem from="1530137612725" duration="33538000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39826000" />
+    <option name="totallyTimeSpent" value="40586000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -625,8 +625,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/DashboardTest/ResourceCard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="85" column="41" selection-start-line="85" selection-start-column="41" selection-end-line="85" selection-end-column="41" />
+        <state relative-caret-position="110">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
