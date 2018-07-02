@@ -1,5 +1,4 @@
 
-
 .login-clean {
     padding: 60px 0
 }
@@ -11,7 +10,7 @@
     background-color: #fff;
     padding: 40px;
     border-radius: 4px;
-    /*color: #505e6c;*/
+    color: #505e6c;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .1)
 }
 
@@ -66,11 +65,9 @@
     text-decoration: none
 }
 
-.no-u-line:hover{
+.no-u-line:hover {
     text-decoration: none;
 }
-
-
 
 .registration-clean {
     padding: 60px 0
@@ -86,6 +83,7 @@
     color: #505e6c;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .1)
 }
+
 .registration-clean form .form-control {
     border: none;
     border-bottom: 1px solid #dfe7f1;
@@ -96,7 +94,8 @@
     text-indent: 8px;
     height: 42px
 }
-.container{
+
+.container {
     margin-top: 70px;
 }
 
@@ -117,6 +116,7 @@ div.btn-group {
     color: #505e6c;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .1)
 }
+
 .setting-clean form .form-control {
     border: none;
     border-bottom: 1px solid #dfe7f1;
@@ -142,6 +142,7 @@ div.btn-group {
     color: #505e6c;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
 }
+
 .add-link-clean form .form-control {
     border: none;
     border-bottom: 1px solid #dfe7f1;
@@ -156,4 +157,43 @@ div.btn-group {
 .add-link-btn {
     margin-top: 30px;
     text-align: right;
+}
+
+img.profile-picture {
+    cursor: pointer;
+}
+
+.add-resource-fab-main {
+    background-color: #000;
+    border: none;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: inline-block;
+    fill: #fff;
+    height: 56px;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 56px;
+    z-index: 4000;
+
+}
+
+.add-resource-fab {
+    background-color: #e91e63;
+    bottom: 0;
+    margin-bottom: 24px;
+    margin-right: 24px;
+    position: fixed;
+    right: 0;
+}
+
+.dialog {
+    width: 75%;
 }

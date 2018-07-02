@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Cards.css';
-import profile from '/Users/farbodaprin/Desktop/smartqr/src/images/img_avatar.png';
+import profile from '../../images/img_avatar.png';
 
 class Cards extends React.Component {
     render() {
