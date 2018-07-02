@@ -1,0 +1,12 @@
+.Person {
+    width: 60%;
+    margin: auto;
+    border: 1px solid #a100ee;
+    box-shadow: 0 2px 3px rgba(38, 121, 204, 0.8);
+    padding: 16px;
+    text-align: center;
+    margin-top: 32px;
+    margin-left: 50px;
+    color : aliceblue;
+    background-color: #4c6fff;
+}

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Header from "../Header/Header";
 import ReactDOM from 'react-dom';
 import Button from '@material-ui/core/Button';
+import TextField from "@material-ui/core/es/TextField/TextField";
 
 
 class AddLink extends Component {
@@ -14,15 +15,24 @@ class AddLink extends Component {
                 <div className="add-link-clean">
                     <form method="post">
                         <p className="col-12">
-                            Add new reference
+                            <h3>Add new reference</h3>
                         </p>
                         <div className="form-group right">
-                            <input type="text" name="title"
-                                   placeholder="Title of reference" className="form-control"/>
+                            <TextField
+                                id="title"
+                                label="Title of reference"
+                                margin="normal"
+                                className="form-control"
+                            />
                         </div>
                         <div className="form-group right">
-                            <input type="text" name="url"
-                                   placeholder="URL of reference" className="form-control"/>
+                            <TextField
+                                id="url"
+                                label="URL of reference"
+                                placeholder="URL of reference"
+                                margin="normal"
+                                className="form-control"
+                            />
                         </div>
 
                         <div className="form-group add-link-btn">
