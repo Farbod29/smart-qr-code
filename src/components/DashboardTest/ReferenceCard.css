@@ -1,0 +1,16 @@
+.icon-cog{
+    color: #4c6fff;
+}
+.icon{
+    color: #4c6fff;
+}
+.fas fa-thumbtack fa_custom {
+    color: #7afff0;
+}
+.fa_custom
+{
+    color: #ffeb17;
+}
+.fa_custom:hover {
+    box-shadow: 0 12px 20 rgba(255, 250, 71, 0.7);
+}

@@ -8,9 +8,15 @@ import IconButton from "@material-ui/core/es/IconButton/IconButton";
 import {parseUrlData} from "../../utils/Connection";
 import NoImagePreview from '../../images/no-preview.jpg';
 import {GridLoader} from "react-spinners";
+import Pin from "./Pin";
 
 
 class ResourceCard extends Component {
+
+    togglePin = () => {
+        const pinActive = this.state.showPersons;
+        this.setState({showPersons: !pinActive});
+    };
 
     constructor(props) {
         super(props);
@@ -21,6 +27,8 @@ class ResourceCard extends Component {
             disc: "",
             imgURL: "",
             url: props.url,
+            PinActive: true
+
         };
     }
 
@@ -34,7 +42,7 @@ class ResourceCard extends Component {
                 disc: response.excerpt,
                 imgURL: response.lead_image_url,
                 url: response.url,
-                isUrlDataFetched: true,
+                isUrlDataFetched: false,
             });
         });
     }
@@ -44,6 +52,19 @@ class ResourceCard extends Component {
     }
 
     render() {
+
+        let pin = null;
+        if (this.state.PinActive) {
+            pin = (
+                <div>
+                    <Pin/>
+                    {/*// persons={this.state.persons}*/}
+                    {/*// clicked={this.deletepersonHandler}*/}
+                    {/*// changed={this.nameChangedHandler}*/}
+                </div>
+            );
+        }
+
         const card = {
             width: 268,
             minHeight: 268,
@@ -96,19 +117,14 @@ class ResourceCard extends Component {
                                 <IconButton aria-label="Add to favorites">
                                     <i className="fas fa-angle-double-down text-black-50"/>
                                 </IconButton>
-
-                                <IconButton
-                                    className="ml-auto">
-                                    <i className="fab fa-youtube"/>
-                                </IconButton>
-
+                                <div>{pin}</div>
                             </CardActions>
                         </Card>
                     </div>
                 ) : (
                     <div>
                         <Card style={card}>
-                            <div className="text-center" style={loader} >
+                            <div className="text-center" style={loader}>
                                 <GridLoader
                                     color={'#0098d3'}
                                     loading={true}

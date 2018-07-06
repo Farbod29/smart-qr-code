@@ -1,16 +1,20 @@
 import React from "react";
+import IconButton from "@material-ui/core/es/IconButton/IconButton";
 import {IndexLink, Link} from "react-router";
+import './ReferenceCard.css';
 
-
-const Input = (props) => {
+const Pin = (props) => {
     return (
         <div>
-            <h2 onClick={props.click}>I'm a {props.name}, and I am {props.age} years old</h2>
-            <p>{props.children}</p>
-            <input type='text' onChange={props.changed}/>
+            <IconButton
+                className="ml-auto">
+                {/*<i className="fa fa-thumbtack" />*/}
+                {/*<i className="fa fa-thumb-tack fa_custom" style={fa_custom} />*/}
+                <i className="fas fa-thumbtack fa_custom" />
+            </IconButton>
         </div>
     );
 };
 
-export default Input;
+export default Pin;
 

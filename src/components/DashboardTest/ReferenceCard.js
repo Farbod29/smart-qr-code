@@ -19,6 +19,7 @@ class ReferenceCard extends Component {
             disc: "",
             imgURL: "",
             url: props.url,
+            isPined : false,
         };
     }
 
@@ -79,10 +80,9 @@ class ReferenceCard extends Component {
                             <IconButton aria-label="Add to favorites">
                                 <i className="fas fa-angle-double-down text-black-50"/>
                             </IconButton>
-
                             <IconButton
                                 className="ml-auto">
-                                <i className="fab fa-youtube"/>
+                                <i className="fas fa-thumbtack"/>
                             </IconButton>
 
                         </CardActions>
