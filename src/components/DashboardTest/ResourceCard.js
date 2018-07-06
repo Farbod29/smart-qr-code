@@ -9,14 +9,10 @@ import {parseUrlData} from "../../utils/Connection";
 import NoImagePreview from '../../images/no-preview.jpg';
 import {GridLoader} from "react-spinners";
 import Pin from "./Pin";
+import UnPin from "./UnPin";
 
 
 class ResourceCard extends Component {
-
-    togglePin = () => {
-        const pinActive = this.state.showPersons;
-        this.setState({showPersons: !pinActive});
-    };
 
     constructor(props) {
         super(props);
@@ -28,7 +24,6 @@ class ResourceCard extends Component {
             imgURL: "",
             url: props.url,
             PinActive: true
-
         };
     }
 
@@ -42,29 +37,19 @@ class ResourceCard extends Component {
                 disc: response.excerpt,
                 imgURL: response.lead_image_url,
                 url: response.url,
-                isUrlDataFetched: false,
+                isUrlDataFetched: true,
             });
         });
     }
-
+        togglePin = () => {
+        const pinActive = this.state.PinActive;
+        this.setState({PinActive: !pinActive});
+    };
     componentDidMount() {
         this.parseUrl(this.state.url);
     }
 
     render() {
-
-        let pin = null;
-        if (this.state.PinActive) {
-            pin = (
-                <div>
-                    <Pin/>
-                    {/*// persons={this.state.persons}*/}
-                    {/*// clicked={this.deletepersonHandler}*/}
-                    {/*// changed={this.nameChangedHandler}*/}
-                </div>
-            );
-        }
-
         const card = {
             width: 268,
             minHeight: 268,
@@ -84,6 +69,30 @@ class ResourceCard extends Component {
         if (finalImageURL == null) {
             finalImageURL = NoImagePreview;
         }
+
+        let pin = null;
+        if (this.state.PinActive) {
+            pin = (
+                <div>
+                    <Pin/>
+                    {/*// persons={this.state.persons}*/}
+                    clicked={this.togglePin}
+                    {/*// changed={this.nameChangedHandler}*/}
+                </div>
+            );
+
+        }else
+        {
+            pin = (
+                <div>
+                    <UnPin/>
+                    {/*// persons={this.state.persons}*/}
+                    {/*// clicked={this.deletepersonHandler}*/}
+                    {/*// changed={this.nameChangedHandler}*/}
+                </div>
+                );
+        }
+
         return (
             <div className="m-2 col-centered">
 
@@ -117,14 +126,19 @@ class ResourceCard extends Component {
                                 <IconButton aria-label="Add to favorites">
                                     <i className="fas fa-angle-double-down text-black-50"/>
                                 </IconButton>
+                                {/*<IconButton*/}
+                                    {/*className="ml-auto">*/}
+                                    {/*<i className="fab fa-youtube"/>*/}
+                                {/*</IconButton>*/}
                                 <div>{pin}</div>
+
                             </CardActions>
                         </Card>
                     </div>
                 ) : (
                     <div>
                         <Card style={card}>
-                            <div className="text-center" style={loader}>
+                            <div className="text-center" style={loader} >
                                 <GridLoader
                                     color={'#0098d3'}
                                     loading={true}
