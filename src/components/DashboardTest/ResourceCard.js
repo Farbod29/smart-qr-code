@@ -23,7 +23,8 @@ class ResourceCard extends Component {
             disc: "",
             imgURL: "",
             url: props.url,
-            PinActive: true
+            PinActive: true,
+            count: 0
         };
     }
 
@@ -46,6 +47,18 @@ class ResourceCard extends Component {
         const pinActive = this.state.PinActive;
         this.setState({PinActive: !pinActive});
     };
+    onClickPlus=(event)=>{
+        this.setState({
+            count: this.state.count + 1
+        });
+    }
+    onClickMinus=(event)=>
+    {
+        this.setState({
+            count: this.state.count - 1
+        });
+    };
+
     componentDidMount() {
         this.parseUrl(this.state.url);
     }
@@ -80,10 +93,8 @@ class ResourceCard extends Component {
                     />
                 </div>
             );
-
         }else
         {
-
             pin = (
                 <div>
                     <UnPin
@@ -92,7 +103,6 @@ class ResourceCard extends Component {
                 </div>
                 );
         }
-
         return (
             <div className="m-2 col-centered">
 
@@ -119,11 +129,11 @@ class ResourceCard extends Component {
                             </CardContent>
                             {/*icons from: https://fontawesome.com/icons*/}
                             <CardActions>
-                                <IconButton aria-label="Add to favorites">
+                                <IconButton aria-label="Add to favorites" onClick={this.onClickPlus.bind(this)}>
                                     <i className="fas fa-angle-double-up text-dark"/>
                                 </IconButton>
-                                <label>7+</label>
-                                <IconButton aria-label="Add to favorites">
+                                <label> {this.state.count} </label>
+                                <IconButton aria-label="Add to favorites" onClick={this.onClickMinus.bind(this)} >
                                     <i className="fas fa-angle-double-down text-black-50"/>
                                 </IconButton>
                                 <div>{pin}</div>
