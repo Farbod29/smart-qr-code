@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Cards from "../Cards/Cards";
+import Cards from "../cards/Cards";
 
 class Dashboard extends Component {
     toggleModal = () => {
