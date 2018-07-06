@@ -7,6 +7,7 @@ const UnPin = (props) => {
     return (
         <div>
             <IconButton
+                onClick={props.click}
                 className="ml-auto">
                 {/*<i className="fa fa-thumbtack" />*/}
                 {/*<i className="fa fa-thumb-tack fa_custom" style={fa_custom} />*/}

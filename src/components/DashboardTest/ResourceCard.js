@@ -42,6 +42,7 @@ class ResourceCard extends Component {
         });
     }
         togglePin = () => {
+        console.log("clicked on toggle");
         const pinActive = this.state.PinActive;
         this.setState({PinActive: !pinActive});
     };
@@ -74,21 +75,20 @@ class ResourceCard extends Component {
         if (this.state.PinActive) {
             pin = (
                 <div>
-                    <Pin/>
-                    {/*// persons={this.state.persons}*/}
-                    clicked={this.togglePin}
-                    {/*// changed={this.nameChangedHandler}*/}
+                    <Pin
+                        click={this.togglePin}
+                    />
                 </div>
             );
 
         }else
         {
+
             pin = (
                 <div>
-                    <UnPin/>
-                    {/*// persons={this.state.persons}*/}
-                    {/*// clicked={this.deletepersonHandler}*/}
-                    {/*// changed={this.nameChangedHandler}*/}
+                    <UnPin
+                        click={this.togglePin}
+                    />
                 </div>
                 );
         }
@@ -126,12 +126,7 @@ class ResourceCard extends Component {
                                 <IconButton aria-label="Add to favorites">
                                     <i className="fas fa-angle-double-down text-black-50"/>
                                 </IconButton>
-                                {/*<IconButton*/}
-                                    {/*className="ml-auto">*/}
-                                    {/*<i className="fab fa-youtube"/>*/}
-                                {/*</IconButton>*/}
                                 <div>{pin}</div>
-
                             </CardActions>
                         </Card>
                     </div>
@@ -148,8 +143,6 @@ class ResourceCard extends Component {
                         </Card>
                     </div>
                 )}
-
-
             </div>
         );
     }
