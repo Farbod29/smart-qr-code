@@ -8,6 +8,8 @@ import IconButton from "@material-ui/core/es/IconButton/IconButton";
 import {parseUrlData} from "../../utils/Connection";
 import NoImagePreview from '../../images/no-preview.jpg';
 import {GridLoader} from "react-spinners";
+import Pin from "./Pin";
+import UnPin from "./UnPin";
 
 
 class ResourceCard extends Component {
@@ -21,6 +23,8 @@ class ResourceCard extends Component {
             disc: "",
             imgURL: "",
             url: props.url,
+            PinActive: true,
+            count: 0
         };
     }
 
@@ -38,6 +42,22 @@ class ResourceCard extends Component {
             });
         });
     }
+        togglePin = () => {
+        console.log("clicked on toggle");
+        const pinActive = this.state.PinActive;
+        this.setState({PinActive: !pinActive});
+    };
+    onClickPlus=(event)=>{
+        this.setState({
+            count: this.state.count + 1
+        });
+    }
+    onClickMinus=(event)=>
+    {
+        this.setState({
+            count: this.state.count - 1
+        });
+    };
 
     componentDidMount() {
         this.parseUrl(this.state.url);
@@ -62,6 +82,26 @@ class ResourceCard extends Component {
 
         if (finalImageURL == null) {
             finalImageURL = NoImagePreview;
+        }
+
+        let pin = null;
+        if (this.state.PinActive) {
+            pin = (
+                <div>
+                    <Pin
+                        click={this.togglePin}
+                    />
+                </div>
+            );
+        }else
+        {
+            pin = (
+                <div>
+                    <UnPin
+                        click={this.togglePin}
+                    />
+                </div>
+                );
         }
         return (
             <div className="m-2 col-centered">
@@ -89,19 +129,14 @@ class ResourceCard extends Component {
                             </CardContent>
                             {/*icons from: https://fontawesome.com/icons*/}
                             <CardActions>
-                                <IconButton aria-label="Add to favorites">
+                                <IconButton aria-label="Add to favorites" onClick={this.onClickPlus.bind(this)}>
                                     <i className="fas fa-angle-double-up text-dark"/>
                                 </IconButton>
-                                <label>7+</label>
-                                <IconButton aria-label="Add to favorites">
+                                <label> {this.state.count} </label>
+                                <IconButton aria-label="Add to favorites" onClick={this.onClickMinus.bind(this)} >
                                     <i className="fas fa-angle-double-down text-black-50"/>
                                 </IconButton>
-
-                                <IconButton
-                                    className="ml-auto">
-                                    <i className="fab fa-youtube"/>
-                                </IconButton>
-
+                                <div>{pin}</div>
                             </CardActions>
                         </Card>
                     </div>
@@ -118,8 +153,6 @@ class ResourceCard extends Component {
                         </Card>
                     </div>
                 )}
-
-
             </div>
         );
     }

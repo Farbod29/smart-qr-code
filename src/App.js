@@ -26,13 +26,13 @@ class App extends Component {
               <div className="sans-serif">
                   <Route exact path="/" component={Login}/>  {/*this is a main entry .. we will change it later .. but i write it now to don't show a blank page in the start of the project*/}
                   <Route path="/ForgotPassword" component={ForgotPassword}/>
-                  <Route path="/Dashboard" component={Dashboard}/>
+                  {/*<Route path="/Dashboard" component={Dashboard}/>*/}
                   <Route path="/DashboardTest" component={ReferenceCard}/>
                   <Route path="/ReferencesDashboard" component={ReferencesDashboard}/>
                   <Route path="/login" component={Login}/>
                   <Route path="/AddLink" component={AddLink}/>
                   <Route path="/settings" component={Settings}/>
-                  <Route path="/emaam" component={Dashboard}/>
+                  {/*<Route path="/emaam" component={Dashboard}/>*/}
                   <Route path="/Register" component={Register}/>
               </div>
           </BrowserRouter>

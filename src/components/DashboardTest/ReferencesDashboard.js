@@ -45,12 +45,12 @@ class ReferencesDashboard extends Component {
                 <div className="row" id="card-container">
                     <ResourceCard url="https://github.com/facebook/react"/>
                     <ResourceCard url="https://www.youtube.com/watch?v=KMX1mFEmM3E"/>
-                    <ResourceCard url="https://material-ui.com/demos/cards/#cards"/>
-                    <ResourceCard url="https://www.android.com/"/>
-                    <ResourceCard url="https://vuejs.org/"/>
-                    <ResourceCard url="https://jsoneditoronline.org/"/>
-                    <ResourceCard url="https://bitbucket.org/"/>
-                    <ResourceCard url="https://moodle.uni-due.de"/>
+                    {/*<ResourceCard url="https://material-ui.com/demos/cards/#cards"/>*/}
+                    {/*<ResourceCard url="https://www.android.com/"/>*/}
+                    {/*<ResourceCard url="https://vuejs.org/"/>*/}
+                    {/*<ResourceCard url="https://jsoneditoronline.org/"/>*/}
+                    {/*<ResourceCard url="https://bitbucket.org/"/>*/}
+                    {/*<ResourceCard url="https://moodle.uni-due.de"/>*/}
                 </div>
 
 
