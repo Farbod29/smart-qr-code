@@ -28,17 +28,17 @@ class Header extends Component {
                         </button>
                         <div className="collapse navbar-collapse" id="navbarToggleExternalContent">
                             <ul className="navbar-nav ml-auto">
-                                <li className="nav-item">
-                                    <LinkContainer to="/Dashboard">
-                                        <a className="nav-link text-primary font-weight-bold">
-                                            Dashboard
-                                        </a>
-                                    </LinkContainer>
-                                </li>
+                                {/*<li className="nav-item">*/}
+                                    {/*<LinkContainer to="/Dashboard">*/}
+                                        {/*<a className="nav-link text-primary font-weight-bold">*/}
+                                            {/*Dashboard*/}
+                                        {/*</a>*/}
+                                    {/*</LinkContainer>*/}
+                                {/*</li>*/}
                                 <li className="nav-item">
                                     <LinkContainer to="/ReferencesDashboard">
                                         <a className="nav-link text-dark font-weight-bold">
-                                            Dashboard 2
+                                            Dashboard
                                         </a>
                                     </LinkContainer>
                                 </li>
