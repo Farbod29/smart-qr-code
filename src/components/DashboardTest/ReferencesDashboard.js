@@ -27,12 +27,7 @@ class ReferencesDashboard extends Component {
     }
 
     componentDidMount() {
-
-        if (localStorage.getItem(StorageKeys.USER_ID).length > 0)
-            this.getResources();
-        else
-            this.props.history.push('/login');
-
+         this.getResources();
     }
 
     getResources() {

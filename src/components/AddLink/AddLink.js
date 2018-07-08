@@ -119,7 +119,7 @@ class AddLink extends Component {
                         <Button onClick={this.handleClose} color="primary">
                             Cancel
                         </Button>
-                        <Button  onClick={this.addResource.bind(this)}color="primary" disabled={!this.validateForm()}>
+                        <Button  onClick={this.addResource.bind(this)} color="primary" disabled={!this.validateForm()}>
                             Add
                         </Button>
                     </DialogActions>

@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a97d0967-137c-4fb4-9988-90cc10b57c57" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/StorageKeys.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Connection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AddLink/AddLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AddLink/AddLink.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DashboardTest/ReferencesDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DashboardTest/ReferencesDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,6 +18,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ReferencesDashboard.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/DashboardTest/ReferencesDashboard.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Header.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Header/Header.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="68" column="54" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="StorageKeys.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/utils/StorageKeys.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -31,11 +54,8 @@
       <file leaf-file-name="Login.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Login/Login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="5" column="49" lean-forward="true" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -43,8 +63,8 @@
       <file leaf-file-name="AddLink.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/AddLink/AddLink.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="66" />
+            <state relative-caret-position="2057">
+              <caret line="121" column="71" selection-start-line="121" selection-start-column="71" selection-end-line="121" selection-end-column="71" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -83,12 +103,12 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/components/Header.js" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/components/DashboardTest/ReferencesDashboard.js" />
-        <option value="$PROJECT_DIR$/src/components/AddLink/AddLink.js" />
-        <option value="$PROJECT_DIR$/src/components/Header/Header.js" />
         <option value="$PROJECT_DIR$/src/utils/StorageKeys.js" />
         <option value="$PROJECT_DIR$/src/utils/Connection.js" />
         <option value="$PROJECT_DIR$/src/components/Login/Login.js" />
+        <option value="$PROJECT_DIR$/src/components/AddLink/AddLink.js" />
+        <option value="$PROJECT_DIR$/src/components/Header/Header.js" />
+        <option value="$PROJECT_DIR$/src/components/DashboardTest/ReferencesDashboard.js" />
       </list>
     </option>
   </component>
@@ -151,6 +171,20 @@
               <item name="smart-qr-code" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="DashboardTest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smart-qr-code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smart-qr-code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="smart-qr-code" type="b2602c69:ProjectViewProjectNode" />
+              <item name="smart-qr-code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Login" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -207,12 +241,12 @@
       <workItem from="1530982191307" duration="4421000" />
       <workItem from="1531001073763" duration="43000" />
       <workItem from="1531013276698" duration="9377000" />
-      <workItem from="1531054867626" duration="6351000" />
+      <workItem from="1531054867626" duration="6891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19386000" />
+    <option name="totallyTimeSpent" value="19926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -504,30 +538,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/DashboardTest/ReferencesDashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="639">
-          <caret line="102" column="25" selection-start-line="102" selection-start-column="25" selection-end-line="102" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="731">
           <caret line="65" column="41" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="54" lean-forward="true" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -547,8 +561,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/AddLink/AddLink.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="66" />
+        <state relative-caret-position="2057">
+          <caret line="121" column="71" selection-start-line="121" selection-start-column="71" selection-end-line="121" selection-end-column="71" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header/Header.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="68" column="54" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/DashboardTest/ReferencesDashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -557,11 +591,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Login/Login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="49" lean-forward="true" selection-start-line="5" selection-start-column="49" selection-end-line="5" selection-end-column="49" />
         </state>
       </provider>
     </entry>

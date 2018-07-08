@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {LinkContainer} from "react-router-bootstrap";
+import StorageKeys from "../../utils/StorageKeys";
 
 // styles
 // import "../../node_modules/jquery/dist/jquery.min.js";
@@ -7,10 +8,20 @@ import {LinkContainer} from "react-router-bootstrap";
 // import "../../node_modules/bootstrap/dist/js/bootstrap.min.js";
 
 class Header extends Component {
+
+
+    logout(){
+        localStorage.setItem(StorageKeys.USER_ID, "");
+        localStorage.setItem(StorageKeys.EMAIL, "");
+        localStorage.setItem(StorageKeys.PHOTO_URL, "");
+    }
+
+
     render() {
         const shadow = {
             boxShadow: '1px 1px 5px rgba(0, 0, 0, .25)'
         };
+
         return (
             <div className="App">
 
@@ -50,13 +61,24 @@ class Header extends Component {
                                         </a>
                                     </LinkContainer>
                                 </li>
-                                <li className="nav-item ">
-                                    <LinkContainer to="/Login">
-                                        <a className="nav-link text-dark font-weight-bold">
-                                            Login
-                                        </a>
-                                    </LinkContainer>
-                                </li>
+
+                                {localStorage.getItem(StorageKeys.USER_ID).length  > 0 ? (
+                                    <li className="nav-item " onClick={this.logout.bind(this)}>
+                                        <LinkContainer to="/home" >
+                                            <a className="nav-link text-dark font-weight-bold">
+                                                Logout
+                                            </a>
+                                        </LinkContainer>
+                                    </li>
+                                ) : (
+                                    <li className="nav-item ">
+                                        <LinkContainer to="/Login">
+                                            <a className="nav-link text-dark font-weight-bold">
+                                                Login
+                                            </a>
+                                        </LinkContainer>
+                                    </li>
+                                )}
                             </ul>
                         </div>
                     </div>
