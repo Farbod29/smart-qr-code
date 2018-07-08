@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Header from "../Header";
+import Header from "../Header/Header";
 import ResourceCard from "./ResourceCard";
 import Button from "@material-ui/core/es/Button/Button";
 import Dialog from "@material-ui/core/es/Dialog/Dialog";

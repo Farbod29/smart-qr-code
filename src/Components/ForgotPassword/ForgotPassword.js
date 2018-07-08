@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Header from "../Header";
+import Header from "../Header/Header";
 import Button from '@material-ui/core/Button';
 import TextField from "@material-ui/core/es/TextField/TextField";
 
