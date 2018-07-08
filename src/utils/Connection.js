@@ -4,11 +4,13 @@ import axios from 'axios';
 const LINK_PREVIEW = "http://api.linkpreview.net/?key=5b34416685a7ce81e7408aa64be981a91c4c742b33c57&q=";
 const BASE_API_URL = 'http://localhost:7000/';
 const CREATE_BOARD = BASE_API_URL + "boards/create";
+const BOARD = BASE_API_URL + "boards/";
 
 export {
     getLinkPreviewData,
     parseUrlData,
-    createNewBoardData
+    createNewBoardData,
+    getBoardResourcesData
 };
 
 function getLinkPreviewData(url) {
@@ -59,6 +61,21 @@ function createNewBoardData(title) {
         'title': title
     };
     return axios.post(CREATE_BOARD, data, axiosConfig)
+        .then(response => {
+            console.log("response: " + JSON.stringify(response));
+            return response
+        })
+        .catch(error => {
+            console.log("error: " + JSON.stringify(error));
+            return error
+        });
+}
+
+function getBoardResourcesData(tagCode) {
+    var data = {
+        'title': title
+    };
+    return axios.post(BOARD, data)
         .then(response => {
             console.log("response: " + JSON.stringify(response));
             return response
