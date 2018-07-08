@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {LinkContainer} from "react-router-bootstrap";
-import ReferencesDashboard from "../DashboardTest/ReferencesDashboard";
+import ReferencesDashboard from "./DashboardTest/ReferencesDashboard";
 
 // styles
 // import "../../node_modules/jquery/dist/jquery.min.js";

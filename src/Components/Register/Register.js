@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Button from "@material-ui/core/es/Button/Button";
 import TextField from "@material-ui/core/es/TextField/TextField";
-import Header from "../Header/Header";
+import Header from "../Header";
 
 class RegisterComponent extends Component {
 
