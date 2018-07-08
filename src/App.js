@@ -11,6 +11,7 @@ import Register from "./components/Register/Register";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 import ReferenceCard from "./components/DashboardTest/ReferenceCard";
 import ReferencesDashboard from "./components/DashboardTest/ReferencesDashboard";
+import Home from "./components/Home/Home";
 
 class App extends Component {
     state =
@@ -24,9 +25,9 @@ class App extends Component {
       return <div className="App">
           <BrowserRouter>
               <div className="sans-serif">
-                  <Route exact path="/" component={Login}/>  {/*this is a main entry .. we will change it later .. but i write it now to don't show a blank page in the start of the project*/}
+                  <Route exact path="/" component={Home}/>  {/*this is a main entry .. we will change it later .. but i write it now to don't show a blank page in the start of the project*/}
+                  <Route path="/Home" component={Home}/>
                   <Route path="/ForgotPassword" component={ForgotPassword}/>
-                  {/*<Route path="/Dashboard" component={Dashboard}/>*/}
                   <Route path="/DashboardTest" component={ReferenceCard}/>
                   <Route path="/ReferencesDashboard" component={ReferencesDashboard}/>
                   <Route path="/login" component={Login}/>
