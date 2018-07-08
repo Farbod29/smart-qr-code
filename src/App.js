@@ -29,7 +29,8 @@ class App extends Component {
                   <Route path="/Home" component={Home}/>
                   <Route path="/ForgotPassword" component={ForgotPassword}/>
                   <Route path="/DashboardTest" component={ReferenceCard}/>
-                  <Route path="/ReferencesDashboard" component={ReferencesDashboard}/>
+                  <Route path="/board" component={ReferencesDashboard}/>
+                  <Route path="/board/:id" component={ReferencesDashboard}/>
                   <Route path="/login" component={Login}/>
                   <Route path="/AddLink" component={AddLink}/>
                   <Route path="/settings" component={Settings}/>

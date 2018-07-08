@@ -7,18 +7,25 @@ import AddLink from "../AddLink/AddLink";
 
 class ReferencesDashboard extends Component {
 
-
     state = {
         open: false,
     };
-
     handleClickOpen = () => {
         this.setState({open: true});
     };
-
     handleClose = () => {
         this.setState({open: false});
     };
+
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        if (this.props.match.params.id != null) {
+            console.log("id >> " + this.props.match.params.id);
+        }
+    }
 
 
     render() {
