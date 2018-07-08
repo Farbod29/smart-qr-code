@@ -8,6 +8,7 @@ import DialogContentText from "@material-ui/core/es/DialogContentText/DialogCont
 import DialogContent from "@material-ui/core/es/DialogContent/DialogContent";
 import DialogActions from "@material-ui/core/es/DialogActions/DialogActions";
 import Slide from "@material-ui/core/es/Slide/Slide";
+import StorageKeys from "../../utils/StorageKeys";
 
 
 function Transition(props) {
@@ -82,7 +83,8 @@ class Settings extends Component {
                          className="img-thumbnail profile-picture"
                          style={profile_picture}
                          width={100} height={100}
-                         src={"https://sarahahstorage.blob.core.windows.net/files/cce0f00c-31b7-4caa-9bfa-5cf8fcef685e.jpg"}/>
+                         src={localStorage.getItem(StorageKeys.PHOTO_URL)}/>
+                         {/*src={"https://sarahahstorage.blob.core.windows.net/files/cce0f00c-31b7-4caa-9bfa-5cf8fcef685e.jpg"}/>*/}
 
                     <h4 className="mt-3">
                         SmartQRcode Group
