@@ -15,7 +15,8 @@ class LoginComponent extends Component {
         this.state = {
             email: "",
             password: "",
-            isRequesting: false
+            isRequesting: false,
+            errorMessage: "",
         };
     }
 
@@ -52,7 +53,8 @@ class LoginComponent extends Component {
                 }
                 else {
                     this.setState({
-                        isRequesting: false
+                        isRequesting: false,
+                        errorMessage: result.response.data.message
                     });
                     console.log("status3: " + result);
                 }
@@ -60,7 +62,8 @@ class LoginComponent extends Component {
             .catch(error => {
                 console.log("status4: " + error);
                 this.setState({
-                    isRequesting: false
+                    isRequesting: false,
+                    errorMessage: error.response.data.message
                 });
             });
         event.preventDefault();
@@ -82,6 +85,13 @@ class LoginComponent extends Component {
                         <h2 className="sr-only">Login Form</h2>
                         <div className="illustration"><i className="icon ion-log-in text-primary"/>
                         </div>
+
+                        {this.state.errorMessage.length > 0 ? (
+                            <div className="alert alert-danger font-weight-bold">
+                                {this.state.errorMessage}
+                            </div>
+                        ) : (null)}
+
                         <div className="form-group">
                             <TextField
                                 id="email"
