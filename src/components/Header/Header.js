@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {LinkContainer} from "react-router-bootstrap";
-import ReferencesDashboard from "../DashboardTest/ReferencesDashboard";
 
 // styles
 // import "../../node_modules/jquery/dist/jquery.min.js";
@@ -17,9 +16,11 @@ class Header extends Component {
 
                 <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top" style={shadow}>
                     <div className="container mt-0">
-                        <a className="navbar-brand text-dark abs font-weight-bold" href="#">
-                            Smart QR-Code
-                        </a>
+                        <LinkContainer to="/home">
+                            <a className="navbar-brand text-dark abs font-weight-bold" href="#">
+                                Smart QR-Code
+                            </a>
+                        </LinkContainer>
                         <button className="navbar-toggler navbar-toggler-right"
                                 type="button"
                                 data-toggle="collapse"
@@ -29,11 +30,11 @@ class Header extends Component {
                         <div className="collapse navbar-collapse" id="navbarToggleExternalContent">
                             <ul className="navbar-nav ml-auto">
                                 {/*<li className="nav-item">*/}
-                                    {/*<LinkContainer to="/Dashboard">*/}
-                                        {/*<a className="nav-link text-primary font-weight-bold">*/}
-                                            {/*Dashboard*/}
-                                        {/*</a>*/}
-                                    {/*</LinkContainer>*/}
+                                {/*<LinkContainer to="/Dashboard">*/}
+                                {/*<a className="nav-link text-primary font-weight-bold">*/}
+                                {/*Dashboard*/}
+                                {/*</a>*/}
+                                {/*</LinkContainer>*/}
                                 {/*</li>*/}
                                 <li className="nav-item">
                                     <LinkContainer to="/board">

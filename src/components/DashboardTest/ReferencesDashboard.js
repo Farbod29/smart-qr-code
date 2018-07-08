@@ -88,14 +88,6 @@ class ReferencesDashboard extends Component {
                 </Button>
 
                 <div className="row" id="card-container">
-                    {/*<ResourceCard url="https://github.com/facebook/react"/>*/}
-                    {/*<ResourceCard url="https://www.youtube.com/watch?v=KMX1mFEmM3E"/>*/}
-                    {/*<ResourceCard url="https://material-ui.com/demos/cards/#cards"/>*/}
-                    {/*<ResourceCard url="https://www.android.com/"/>*/}
-                    {/*<ResourceCard url="https://vuejs.org/"/>*/}
-                    {/*<ResourceCard url="https://jsoneditoronline.org/"/>*/}
-                    {/*<ResourceCard url="https://bitbucket.org/"/>*/}
-                    {/*<ResourceCard url="https://moodle.uni-due.de"/>*/}
                     {cards}
                 </div>
 
@@ -106,11 +98,9 @@ class ReferencesDashboard extends Component {
                     aria-labelledby="form-dialog-title"
                     fullWidth="75%">
 
-                    <AddLink open={this.state.open} context={this}/>
-
+                    <AddLink board={this.props.match.params.id} open={this.state.open} context={this}/>
 
                 </Dialog>
-
 
             </div>
         );
