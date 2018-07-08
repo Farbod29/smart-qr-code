@@ -7,6 +7,7 @@ const CREATE_BOARD = BASE_API_URL + "boards/create";
 const BOARD = BASE_API_URL + "boards/";
 const CREATE_REFERENCE = BASE_API_URL + "references/create/";
 const LOGIN = BASE_API_URL + "users/login";
+const REGISTER = BASE_API_URL + "users/register";
 
 export {
     getLinkPreviewData,
@@ -14,7 +15,8 @@ export {
     createNewBoardData,
     getBoardResourcesData,
     addNewReferenceData,
-    loginData
+    loginData,
+    registerData
 };
 
 function getLinkPreviewData(url) {
@@ -124,6 +126,29 @@ function loginData(email, password) {
         'password': password
     };
     return axios.post(LOGIN, data, axiosConfig)
+        .then(response => {
+            console.log("response: " + JSON.stringify(response));
+            return response
+        })
+        .catch(error => {
+            console.log("error: " + JSON.stringify(error));
+            return error
+        });
+}
+
+
+function registerData(email, password) {
+
+    let axiosConfig = {
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    };
+    var data = {
+        'email': email,
+        'password': password
+    };
+    return axios.post(REGISTER, data, axiosConfig)
         .then(response => {
             console.log("response: " + JSON.stringify(response));
             return response
