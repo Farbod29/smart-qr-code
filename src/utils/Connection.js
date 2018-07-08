@@ -72,10 +72,8 @@ function createNewBoardData(title) {
 }
 
 function getBoardResourcesData(tagCode) {
-    var data = {
-        'title': title
-    };
-    return axios.post(BOARD, data)
+
+    return axios.post(BOARD + tagCode, data)
         .then(response => {
             console.log("response: " + JSON.stringify(response));
             return response
