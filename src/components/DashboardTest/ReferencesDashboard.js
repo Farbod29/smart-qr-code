@@ -11,7 +11,13 @@ class ReferencesDashboard extends Component {
 
 
     handleClickOpen = () => {
-        this.setState({open: true});
+
+        if (localStorage.getItem(StorageKeys.USER_ID).length > 0) {
+            this.setState({open: true});
+        } else {
+            this.props.history.push('/login');
+        }
+
     };
     handleClose = () => {
         this.setState({open: false});
@@ -27,7 +33,7 @@ class ReferencesDashboard extends Component {
     }
 
     componentDidMount() {
-         this.getResources();
+        this.getResources();
     }
 
     getResources() {

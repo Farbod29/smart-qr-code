@@ -5,6 +5,7 @@ import DialogTitle from "@material-ui/core/es/DialogTitle/DialogTitle";
 import DialogContent from "@material-ui/core/es/DialogContent/DialogContent";
 import DialogActions from "@material-ui/core/es/DialogActions/DialogActions";
 import {addNewReferenceData} from "../../utils/Connection";
+import StorageKeys from "../../utils/StorageKeys";
 
 
 class AddLink extends Component {
@@ -42,7 +43,7 @@ class AddLink extends Component {
             this.setState({
                 isRequesting: true
             });
-            addNewReferenceData(this.state.urlReference, boardTagCode, "5b416605f750d71ee4d5f376") // it's hard-coded for just testing purposes
+            addNewReferenceData(this.state.urlReference, boardTagCode, localStorage.getItem(StorageKeys.USER_ID))
                 .then((result) => {
                     console.log("status1: " + result);
                     if (result.status === 200) {
@@ -88,16 +89,16 @@ class AddLink extends Component {
                             {/*<h3 style={{color: "#0000FF"}}>Add new reference</h3>*/}
                             {/*</p>*/}
                             {/*<div className="form-group right">*/}
-                                {/*<TextField*/}
-                                    {/*id="titleReference"*/}
-                                    {/*label="Title of reference"*/}
-                                    {/*placeholder="type title of reference"*/}
-                                    {/*margin="normal"*/}
-                                    {/*name="titleReference"*/}
-                                    {/*value={this.state.titleReference}*/}
-                                    {/*onChange={this.handleChange}*/}
-                                    {/*className="form-control"*/}
-                                {/*/>*/}
+                            {/*<TextField*/}
+                            {/*id="titleReference"*/}
+                            {/*label="Title of reference"*/}
+                            {/*placeholder="type title of reference"*/}
+                            {/*margin="normal"*/}
+                            {/*name="titleReference"*/}
+                            {/*value={this.state.titleReference}*/}
+                            {/*onChange={this.handleChange}*/}
+                            {/*className="form-control"*/}
+                            {/*/>*/}
                             {/*</div>*/}
                             <div className="form-group right">
                                 <TextField
@@ -119,7 +120,7 @@ class AddLink extends Component {
                         <Button onClick={this.handleClose} color="primary">
                             Cancel
                         </Button>
-                        <Button  onClick={this.addResource.bind(this)} color="primary" disabled={!this.validateForm()}>
+                        <Button onClick={this.addResource.bind(this)} color="primary" disabled={!this.validateForm()}>
                             Add
                         </Button>
                     </DialogActions>
