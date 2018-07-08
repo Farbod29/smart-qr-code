@@ -5,6 +5,7 @@ import Button from "@material-ui/core/es/Button/Button";
 import Dialog from "@material-ui/core/es/Dialog/Dialog";
 import AddLink from "../AddLink/AddLink";
 import {getBoardResourcesData} from "../../utils/Connection";
+import StorageKeys from "../../utils/StorageKeys";
 
 class ReferencesDashboard extends Component {
 
@@ -26,7 +27,12 @@ class ReferencesDashboard extends Component {
     }
 
     componentDidMount() {
-        this.getResources();
+
+        if (localStorage.getItem(StorageKeys.USER_ID).length > 0)
+            this.getResources();
+        else
+            this.props.history.push('/login');
+
     }
 
     getResources() {
@@ -75,7 +81,7 @@ class ReferencesDashboard extends Component {
         };
 
         let cards = this.state.references.map((resource, index) =>
-            <ResourceCard key={index}  url={resource.link} />
+            <ResourceCard key={index} url={resource.link}/>
         );
 
         return (

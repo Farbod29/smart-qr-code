@@ -6,13 +6,15 @@ const BASE_API_URL = 'http://localhost:7000/';
 const CREATE_BOARD = BASE_API_URL + "boards/create";
 const BOARD = BASE_API_URL + "boards/";
 const CREATE_REFERENCE = BASE_API_URL + "references/create/";
+const LOGIN = BASE_API_URL + "users/login";
 
 export {
     getLinkPreviewData,
     parseUrlData,
     createNewBoardData,
     getBoardResourcesData,
-    addNewReferenceData
+    addNewReferenceData,
+    loginData
 };
 
 function getLinkPreviewData(url) {
@@ -99,6 +101,29 @@ function addNewReferenceData(link, board, userId) {
         'userId': userId,
     };
     return axios.post(CREATE_REFERENCE, data, axiosConfig)
+        .then(response => {
+            console.log("response: " + JSON.stringify(response));
+            return response
+        })
+        .catch(error => {
+            console.log("error: " + JSON.stringify(error));
+            return error
+        });
+}
+
+
+function loginData(email, password) {
+
+    let axiosConfig = {
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    };
+    var data = {
+        'email': email,
+        'password': password
+    };
+    return axios.post(LOGIN, data, axiosConfig)
         .then(response => {
             console.log("response: " + JSON.stringify(response));
             return response
