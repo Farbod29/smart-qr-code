@@ -27,7 +27,7 @@ class Header extends Component {
 
                 <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top" style={shadow}>
                     <div className="container mt-0">
-                        <LinkContainer to="/home">
+                        <LinkContainer to="/">
                             <a className="navbar-brand text-dark abs font-weight-bold" href="#">
                                 Smart QR-Code
                             </a>
