@@ -12,7 +12,7 @@ class ReferencesDashboard extends Component {
 
     handleClickOpen = () => {
 
-        if (localStorage.getItem(StorageKeys.USER_ID).length > 0) {
+        if (localStorage.getItem(StorageKeys.USER_ID) != null && localStorage.getItem(StorageKeys.USER_ID).length > 0) {
             this.setState({open: true});
         } else {
             this.props.history.push('/login');

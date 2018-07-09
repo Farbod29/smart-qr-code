@@ -66,7 +66,11 @@ class Settings extends Component {
         this.setState({ open: false });
     };
 
-
+    componentDidMount() {
+        if (localStorage.getItem(StorageKeys.USER_ID) === null || localStorage.getItem(StorageKeys.USER_ID).length === 0 ){
+            this.props.history.push('/login');
+        }
+    }
     render() {
 
         const profile_picture = {
