@@ -26,7 +26,7 @@ class App extends Component {
           <BrowserRouter>
               <div className="sans-serif">
                   <Route exact path="/" component={Home}/>  {/*this is a main entry .. we will change it later .. but i write it now to don't show a blank page in the start of the project*/}
-                  <Route path="/Home" component={Home}/>
+                  {/*<Route path="/Home" component={Home}/>*/}
                   <Route path="/ForgotPassword" component={ForgotPassword}/>
                   <Route path="/DashboardTest" component={ReferenceCard}/>
                   <Route path="/board" component={ReferencesDashboard}/>
