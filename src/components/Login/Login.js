@@ -70,7 +70,7 @@ class LoginComponent extends Component {
     }
 
     componentDidMount() {
-        if (localStorage.getItem(StorageKeys.USER_ID).length > 0 ){
+        if (localStorage.getItem(StorageKeys.USER_ID) != null && localStorage.getItem(StorageKeys.USER_ID).length > 0 ){
             this.props.history.push('/home');
         }
     }

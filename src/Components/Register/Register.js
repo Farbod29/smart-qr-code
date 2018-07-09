@@ -49,6 +49,11 @@ class RegisterComponent extends Component {
             this.state.validatingConfirmPass = true ;
     }
 
+    componentDidMount() {
+        if (localStorage.getItem(StorageKeys.USER_ID) != null && localStorage.getItem(StorageKeys.USER_ID).length > 0 ){
+            this.props.history.push('/home');
+        }
+    }
 
     register(event){
         this.setState({
