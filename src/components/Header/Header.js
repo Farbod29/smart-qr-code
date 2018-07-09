@@ -64,7 +64,7 @@ class Header extends Component {
 
                                 {localStorage.getItem(StorageKeys.USER_ID) != null && localStorage.getItem(StorageKeys.USER_ID).length  > 0 ? (
                                     <li className="nav-item " onClick={this.logout.bind(this)}>
-                                        <LinkContainer to="/home" >
+                                        <LinkContainer to="/" >
                                             <a className="nav-link text-dark font-weight-bold">
                                                 Logout
                                             </a>

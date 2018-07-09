@@ -51,7 +51,7 @@ class RegisterComponent extends Component {
 
     componentDidMount() {
         if (localStorage.getItem(StorageKeys.USER_ID) != null && localStorage.getItem(StorageKeys.USER_ID).length > 0 ){
-            this.props.history.push('/home');
+            this.props.history.push('/');
         }
     }
 
