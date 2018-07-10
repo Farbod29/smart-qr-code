@@ -9,7 +9,7 @@ import DialogContent from "@material-ui/core/es/DialogContent/DialogContent";
 import DialogActions from "@material-ui/core/es/DialogActions/DialogActions";
 import Slide from "@material-ui/core/es/Slide/Slide";
 import StorageKeys from "../../utils/StorageKeys";
-import {loginData} from "../../utils/Connection";
+import {changePasswordData, loginData} from "../../utils/Connection";
 
 
 function Transition(props) {
@@ -28,6 +28,7 @@ class Settings extends Component {
             confirmNewPassword: "",
             validating: false,
             validatingConfirmNewPass: false,
+            isRequesting: false,
         };
     }
 
@@ -74,6 +75,36 @@ class Settings extends Component {
     }
 
 
+    changePassword(event){
+        this.setState({
+            isRequesting: true,
+        });
+        changePasswordData(localStorage.getItem(StorageKeys.USER_ID), this.state.oldPassword, this.state.newPassword)
+            .then((result) => {
+                console.log("status1: " + result);
+                if (result.status === 200) {
+                    console.log("status2: ");
+                    this.setState({
+                        isRequesting: false,
+                    });
+                }
+                else {
+                    this.setState({
+                        isRequesting: false,
+                        errorMessage: result.response.data.message
+                    });
+                    console.log("status3: " + result);
+                }
+            })
+            .catch(error => {
+                console.log("status4: " + error);
+                this.setState({
+                    isRequesting: false,
+                    errorMessage: error.response.data.message
+                });
+            });
+        event.preventDefault();
+    }
 
 
 
@@ -138,7 +169,8 @@ class Settings extends Component {
                     />
                     {this.renderPasswordConfirmError()}
                     <div className="btn mt-2">
-                        <Button variant="contained" color="primary" type="submit" disabled={!this.validateForm()}>
+                        <Button variant="contained" color="primary" type="submit"
+                                onClick={this.changePassword.bind(this)} disabled={!this.validateForm()}>
                             Change Password
                         </Button>
                     </div>

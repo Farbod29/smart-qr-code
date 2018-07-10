@@ -17,7 +17,8 @@ export {
     getBoardResourcesData,
     addNewReferenceData,
     loginData,
-    registerData
+    registerData,
+    changePasswordData
 };
 
 function getLinkPreviewData(url) {
