@@ -51,7 +51,7 @@ class RegisterComponent extends Component {
 
     componentDidMount() {
         if (localStorage.getItem(StorageKeys.USER_ID) != null && localStorage.getItem(StorageKeys.USER_ID).length > 0 ){
-            this.props.history.push('/home');
+            this.props.history.push('/');
         }
     }
 
@@ -74,7 +74,7 @@ class RegisterComponent extends Component {
                     localStorage.setItem(StorageKeys.USER_ID, _userId);
                     localStorage.setItem(StorageKeys.PHOTO_URL, _photoURL);
 
-                    this.props.history.push('/home');
+                    this.props.history.push('/');
                 }
                 else {
                     this.setState({

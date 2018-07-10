@@ -8,6 +8,7 @@ const BOARD = BASE_API_URL + "boards/";
 const CREATE_REFERENCE = BASE_API_URL + "references/create/";
 const LOGIN = BASE_API_URL + "users/login";
 const REGISTER = BASE_API_URL + "users/register";
+const CHANGE_PASSWORD = BASE_API_URL + "users/changePassword";
 
 export {
     getLinkPreviewData,
@@ -16,7 +17,8 @@ export {
     getBoardResourcesData,
     addNewReferenceData,
     loginData,
-    registerData
+    registerData,
+    changePasswordData
 };
 
 function getLinkPreviewData(url) {
@@ -149,6 +151,31 @@ function registerData(email, password) {
         'password': password
     };
     return axios.post(REGISTER, data, axiosConfig)
+        .then(response => {
+            console.log("response: " + JSON.stringify(response));
+            return response
+        })
+        .catch(error => {
+            console.log("error: " + JSON.stringify(error));
+            return error
+        });
+}
+
+
+
+function changePasswordData(userId, oldPassword, newPassword) {
+
+    let axiosConfig = {
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    };
+    var data = {
+        'userId': userId,
+        'oldPassword': oldPassword,
+        'newPassword': newPassword
+    };
+    return axios.post(CHANGE_PASSWORD, data, axiosConfig)
         .then(response => {
             console.log("response: " + JSON.stringify(response));
             return response
