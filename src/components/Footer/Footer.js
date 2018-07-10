@@ -1,13 +1,14 @@
-import React from "react";
-import {IndexLink, Link} from "react-router";
+import React from 'react';
 
-export default class Footer extends React.Component {
+class FooterComponent extends React.Component {
     render() {
-
         return (
-            <div>
-                <h1> {this.props.title}</h1>
-            </div>
+            <footer className="text-center">
+                <hr/>
+                &nbsp;<a href="https://github.com/Farbod29/smart-qr-code">SmartQr</a> {new Date().getFullYear()}
+            </footer>
         );
     }
 }
+
+export default FooterComponent;
