@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import Button from "@material-ui/core/es/Button/Button";
 import TextField from "@material-ui/core/es/TextField/TextField";
 import Header from "../Header/Header";
+import StorageKeys from "../../utils/StorageKeys";
+import {loginData, registerData} from "../../utils/Connection";
 
 class RegisterComponent extends Component {
 
@@ -14,11 +16,13 @@ class RegisterComponent extends Component {
             confirmPassword: "",
             validating: false,
             validatingConfirmPass: false,
+            isRequesting: true,
         };
     }
 
     validateForm() {
-        return this.state.validatingConfirmPass == true && this.state.email.length > 0 && this.state.password.length > 0 && this.state.confirmPassword.length > 0;
+        return this.state.validatingConfirmPass == true && this.state.email.length > 0
+            && this.state.password.length > 0 && this.state.confirmPassword.length > 0;
     }
 
     handleChange = event => {
@@ -45,13 +49,59 @@ class RegisterComponent extends Component {
             this.state.validatingConfirmPass = true ;
     }
 
+    componentDidMount() {
+        if (localStorage.getItem(StorageKeys.USER_ID) != null && localStorage.getItem(StorageKeys.USER_ID).length > 0 ){
+            this.props.history.push('/');
+        }
+    }
+
+    register(event){
+        this.setState({
+            isRequesting: true,
+        });
+        registerData(this.state.email, this.state.password)
+            .then((result) => {
+                console.log("status1: " + result);
+                if (result.status === 200) {
+                    console.log("status2: ");
+                    this.setState({
+                        isRequesting: false,
+                    });
+                    let _email = result.data.message.email;
+                    let _userId = result.data.message._id;
+                    let _photoURL = result.data.message.photo;
+                    localStorage.setItem(StorageKeys.EMAIL, _email);
+                    localStorage.setItem(StorageKeys.USER_ID, _userId);
+                    localStorage.setItem(StorageKeys.PHOTO_URL, _photoURL);
+
+                    this.props.history.push('/');
+                }
+                else {
+                    this.setState({
+                        isRequesting: false,
+                        errorMessage: result.response.data.message
+                    });
+                    console.log("status3: " + result);
+                }
+            })
+            .catch(error => {
+                console.log("status4: " + error);
+                this.setState({
+                    isRequesting: false,
+                    errorMessage: error.response.data.message
+                });
+            });
+        event.preventDefault();
+    }
+
+
     render() {
 
         return <div className="App">
 
             <Header/>
             <div className="registration-clean">
-                <form method="post">
+                <form onSubmit={this.register.bind(this)}>
                     <h2 className="text-center" style={{color: "#0000FF"}}>Create Account</h2>
                     <div className="form-group">
                         <TextField

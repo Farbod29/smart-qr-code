@@ -8,6 +8,8 @@ import DialogContentText from "@material-ui/core/es/DialogContentText/DialogCont
 import DialogContent from "@material-ui/core/es/DialogContent/DialogContent";
 import DialogActions from "@material-ui/core/es/DialogActions/DialogActions";
 import Slide from "@material-ui/core/es/Slide/Slide";
+import StorageKeys from "../../utils/StorageKeys";
+import {changePasswordData, loginData} from "../../utils/Connection";
 
 
 function Transition(props) {
@@ -26,6 +28,7 @@ class Settings extends Component {
             confirmNewPassword: "",
             validating: false,
             validatingConfirmNewPass: false,
+            isRequesting: false,
         };
     }
 
@@ -65,6 +68,45 @@ class Settings extends Component {
         this.setState({ open: false });
     };
 
+    componentDidMount() {
+        if (localStorage.getItem(StorageKeys.USER_ID) === null || localStorage.getItem(StorageKeys.USER_ID).length === 0 ){
+            this.props.history.push('/login');
+        }
+    }
+
+
+    changePassword(event){
+        this.setState({
+            isRequesting: true,
+        });
+        changePasswordData(localStorage.getItem(StorageKeys.USER_ID), this.state.oldPassword, this.state.newPassword)
+            .then((result) => {
+                console.log("status1: " + result);
+                if (result.status === 200) {
+                    console.log("status2: ");
+                    this.setState({
+                        isRequesting: false,
+                    });
+                }
+                else {
+                    this.setState({
+                        isRequesting: false,
+                        errorMessage: result.response.data.message
+                    });
+                    console.log("status3: " + result);
+                }
+            })
+            .catch(error => {
+                console.log("status4: " + error);
+                this.setState({
+                    isRequesting: false,
+                    errorMessage: error.response.data.message
+                });
+            });
+        event.preventDefault();
+    }
+
+
 
     render() {
 
@@ -82,7 +124,8 @@ class Settings extends Component {
                          className="img-thumbnail profile-picture"
                          style={profile_picture}
                          width={100} height={100}
-                         src={"https://sarahahstorage.blob.core.windows.net/files/cce0f00c-31b7-4caa-9bfa-5cf8fcef685e.jpg"}/>
+                         src={localStorage.getItem(StorageKeys.PHOTO_URL)}/>
+                         {/*src={"https://sarahahstorage.blob.core.windows.net/files/cce0f00c-31b7-4caa-9bfa-5cf8fcef685e.jpg"}/>*/}
 
                     <h4 className="mt-3">
                         SmartQRcode Group
@@ -126,7 +169,8 @@ class Settings extends Component {
                     />
                     {this.renderPasswordConfirmError()}
                     <div className="btn mt-2">
-                        <Button variant="contained" color="primary" type="submit" disabled={!this.validateForm()}>
+                        <Button variant="contained" color="primary" type="submit"
+                                onClick={this.changePassword.bind(this)} disabled={!this.validateForm()}>
                             Change Password
                         </Button>
                     </div>

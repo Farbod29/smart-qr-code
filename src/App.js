@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
+// import logo from '/images/logo2.png';
 import './App.css';
 import {BrowserRouter, Route} from "react-router-dom";
 import './general.css';
 import Login from "./components/Login/Login";
 import AddLink from "./components/AddLink/AddLink";
+import Dashboard from  "./components/Dashboard/index";
 import Settings from "./components/Settings/Settings";
 import Register from "./components/Register/Register";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 import ReferenceCard from "./components/DashboardTest/ReferenceCard";
 import ReferencesDashboard from "./components/DashboardTest/ReferencesDashboard";
-import FooterComponent from "./components/Footer/Footer";
-import ResponsiveDashboard from "./components/ResponsiveDashboard/ResponsiveDashboard"
+import Home from "./components/Home/Home";
+
 class App extends Component {
     state =
         {
@@ -23,17 +25,17 @@ class App extends Component {
       return <div className="App">
           <BrowserRouter>
               <div className="sans-serif">
-                  <Route exact path="/" component={Login}/>  {/*this is a main entry .. we will change it later .. but i write it now to don't show a blank page in the start of the project*/}
+                  <Route exact path="/" component={Home}/>  {/*this is a main entry .. we will change it later .. but i write it now to don't show a blank page in the start of the project*/}
+                  {/*<Route path="/Home" component={Home}/>*/}
                   <Route path="/ForgotPassword" component={ForgotPassword}/>
                   <Route path="/DashboardTest" component={ReferenceCard}/>
-                  <Route path="/ReferencesDashboard" component={ReferencesDashboard}/>
+                  <Route path="/board" component={ReferencesDashboard}/>
+                  <Route path="/board?id=:id" component={ReferencesDashboard}/>
                   <Route path="/login" component={Login}/>
                   <Route path="/AddLink" component={AddLink}/>
                   <Route path="/settings" component={Settings}/>
+                  {/*<Route path="/emaam" component={Dashboard}/>*/}
                   <Route path="/Register" component={Register}/>
-                  <Route path="/ResponsiveDashboard" component={ResponsiveDashboard}/>
-
-                  <FooterComponent/>
               </div>
           </BrowserRouter>
       </div>;
