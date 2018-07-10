@@ -9,6 +9,7 @@ import DialogContent from "@material-ui/core/es/DialogContent/DialogContent";
 import DialogActions from "@material-ui/core/es/DialogActions/DialogActions";
 import Slide from "@material-ui/core/es/Slide/Slide";
 import StorageKeys from "../../utils/StorageKeys";
+import {loginData} from "../../utils/Connection";
 
 
 function Transition(props) {
@@ -71,6 +72,11 @@ class Settings extends Component {
             this.props.history.push('/login');
         }
     }
+
+
+
+
+
     render() {
 
         const profile_picture = {
