@@ -37,8 +37,9 @@ class ReferencesDashboard extends Component {
     }
 
     getResources() {
-        if (this.props.match.params.id != null) {
-            console.log("id >> " + this.props.match.params.id);
+        if (this.props.location.search != null) {
+            this.props.location.search = this.props.location.search.slice(4);
+            console.log("id >> " + this.props.location.search);
 
             this.setState({
                 isRequesting: true
