@@ -12,6 +12,7 @@ import Pin from "./Pin";
 import UnPin from "./UnPin";
 
 
+
 class ResourceCard extends Component {
 
     constructor(props) {
@@ -23,8 +24,9 @@ class ResourceCard extends Component {
             disc: "",
             imgURL: "",
             url: props.url,
-            PinActive: true,
-            count: 0
+            pinActive: true,
+            count: 0,
+            userIdentification : true
         };
     }
 
@@ -44,14 +46,14 @@ class ResourceCard extends Component {
     }
         togglePin = () => {
         console.log("clicked on toggle");
-        const pinActive = this.state.PinActive;
-        this.setState({PinActive: !pinActive});
+        const pinActive1 = this.state.pinActive;
+        this.setState({pinActive: !pinActive1});
     };
     onClickPlus=(event)=>{
         this.setState({
             count: this.state.count + 1
         });
-    }
+    };
     onClickMinus=(event)=>
     {
         this.setState({
@@ -103,6 +105,9 @@ class ResourceCard extends Component {
                 </div>
                 );
         }
+        let Outh = null;
+
+
         return (
             <div className="m-2 col-centered">
 

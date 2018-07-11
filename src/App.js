@@ -5,7 +5,6 @@ import {BrowserRouter, Route} from "react-router-dom";
 import './general.css';
 import Login from "./components/Login/Login";
 import AddLink from "./components/AddLink/AddLink";
-import Dashboard from  "./components/Dashboard/index";
 import Settings from "./components/Settings/Settings";
 import Register from "./components/Register/Register";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
@@ -30,7 +29,7 @@ class App extends Component {
                   <Route path="/ForgotPassword" component={ForgotPassword}/>
                   <Route path="/DashboardTest" component={ReferenceCard}/>
                   <Route path="/board" component={ReferencesDashboard}/>
-                  <Route path="/board/:id" component={ReferencesDashboard}/>
+                  <Route path="/board?id=:id" component={ReferencesDashboard}/>
                   <Route path="/login" component={Login}/>
                   <Route path="/AddLink" component={AddLink}/>
                   <Route path="/settings" component={Settings}/>
