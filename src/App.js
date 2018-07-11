@@ -5,7 +5,6 @@ import {BrowserRouter, Route} from "react-router-dom";
 import './general.css';
 import Login from "./components/Login/Login";
 import AddLink from "./components/AddLink/AddLink";
-import Dashboard from  "./components/Dashboard/index";
 import Settings from "./components/Settings/Settings";
 import Register from "./components/Register/Register";
 import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
