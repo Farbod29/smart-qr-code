@@ -2,6 +2,10 @@
   "name": "smartqr",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "5.5.1",
+    "node": "8.9.3"
+  },
   "dependencies": {
     "@material-ui/core": "^1.2.3",
     "@material-ui/icons": "^1.1.0",
