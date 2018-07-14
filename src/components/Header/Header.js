@@ -48,9 +48,9 @@ class Header extends Component {
                                 {/*</LinkContainer>*/}
                                 {/*</li>*/}
                                 <li className="nav-item">
-                                    <LinkContainer to="/board">
+                                    <LinkContainer to="/boards">
                                         <a className="nav-link text-dark font-weight-bold">
-                                            Dashboard
+                                            Boards
                                         </a>
                                     </LinkContainer>
                                 </li>

@@ -11,6 +11,7 @@ import ForgotPassword from "./components/forgotPassword/ForgotPassword";
 import ReferenceCard from "./components/DashboardTest/ReferenceCard";
 import ReferencesDashboard from "./components/DashboardTest/ReferencesDashboard";
 import Home from "./components/Home/Home";
+import Board from "./components/board/Board";
 
 class App extends Component {
 
@@ -23,6 +24,7 @@ class App extends Component {
                   <Route path="/DashboardTest" component={ReferenceCard}/>
                   <Route path="/board" component={ReferencesDashboard}/>
                   <Route path="/board?id=:id" component={ReferencesDashboard}/>
+                  <Route path="/boards" component={Board}/>
                   <Route path="/login" component={Login}/>
                   <Route path="/AddLink" component={AddLink}/>
                   <Route path="/settings" component={Settings}/>

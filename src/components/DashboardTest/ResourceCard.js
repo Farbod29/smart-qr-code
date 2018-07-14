@@ -144,28 +144,6 @@ class ResourceCard extends Component {
         }
 
 
-        // let pin = null;
-        // if (this.state.PinActive) {
-        //     pin = (
-        //         <div>
-        //             <Pin
-        //                 click={this.togglePin}
-        //             />
-        //         </div>
-        //     );
-        // }else
-        // {
-        //     pin = (
-        //         <div>
-        //             <UnPin
-        //                 click={this.togglePin}
-        //             />
-        //         </div>
-        //         );
-        // }
-        // let Outh = null;
-
-
         return (
             <div className="m-2 col-centered">
 

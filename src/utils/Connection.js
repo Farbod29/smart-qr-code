@@ -17,6 +17,7 @@ export {
     getLinkPreviewData,
     parseUrlData,
     createNewBoardData,
+    getBoardsData,
     getBoardResourcesData,
     addNewReferenceData,
     loginData,
@@ -87,6 +88,19 @@ function createNewBoardData(title) {
 function getBoardResourcesData(tagCode, uid) {
 
     return axios.get(BOARD + tagCode + "/" + uid)
+        .then(response => {
+            console.log("response: " + JSON.stringify(response));
+            return response
+        })
+        .catch(error => {
+            console.log("error: " + JSON.stringify(error));
+            return error
+        });
+}
+
+function getBoardsData() {
+
+    return axios.get(BOARD )
         .then(response => {
             console.log("response: " + JSON.stringify(response));
             return response

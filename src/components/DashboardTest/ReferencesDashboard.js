@@ -33,6 +33,7 @@ class ReferencesDashboard extends Component {
     }
 
     componentDidMount() {
+        console.log("mount a board");
         this.getResources();
     }
 
