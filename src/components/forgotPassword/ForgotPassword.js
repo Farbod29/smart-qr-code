@@ -3,7 +3,7 @@ import Header from "../Header/Header";
 import Button from '@material-ui/core/Button';
 import TextField from "@material-ui/core/es/TextField/TextField";
 
-class ForgotPasswor extends Component {
+class ForgotPassword extends Component {
 
     constructor(props) {
         super(props);
@@ -56,4 +56,4 @@ class ForgotPasswor extends Component {
     }
 }
 
-export default ForgotPasswor;
+export default ForgotPassword;
