@@ -121,11 +121,11 @@ class LoginComponent extends Component {
                                Login
                             </Button>
                         </div>
-                        <LinkContainer to="/ForgotPassword" style={{ color: '#B22222' }}>
-                            <a>
-                                Forgot my password
-                            </a>
-                        </LinkContainer>
+                        {/*<LinkContainer to="/ForgotPassword" style={{ color: '#B22222' }}>*/}
+                            {/*<a>*/}
+                                {/*Forgot my password*/}
+                            {/*</a>*/}
+                        {/*</LinkContainer>*/}
                     <br/>
                         <LinkContainer to="/Register" style={{ color: '#3267b2' }}>
                             <a>
