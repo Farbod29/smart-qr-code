@@ -29,7 +29,7 @@ class Header extends Component {
                     <div className="container mt-0">
                         <LinkContainer to="/">
                             <a className="navbar-brand text-dark abs font-weight-bold" href="#">
-                                Smart QR-Code
+                                Smart Learning
                             </a>
                         </LinkContainer>
                         <button className="navbar-toggler navbar-toggler-right"
