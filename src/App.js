@@ -6,7 +6,7 @@ import './general.css';
 import Login from "./components/Login/Login";
 import AddLink from "./components/AddLink/AddLink";
 import Settings from "./components/Settings/Settings";
-import Register from "./components/Register/Register";
+import Regist from "./components/regist/Register";
 // import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
 import ReferenceCard from "./components/DashboardTest/ReferenceCard";
 import ReferencesDashboard from "./components/DashboardTest/ReferencesDashboard";
@@ -26,7 +26,7 @@ class App extends Component {
                   <Route path="/login" component={Login}/>
                   <Route path="/AddLink" component={AddLink}/>
                   <Route path="/settings" component={Settings}/>
-                  <Route path="/Register" component={Register}/>
+                  <Route path="/regist" component={Regist}/>
               </div>
           </BrowserRouter>
       </div>;
