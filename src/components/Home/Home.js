@@ -6,6 +6,7 @@ import {createNewBoardData} from "../../utils/Connection";
 import QRCode from "qrcode-react";
 
 import ReactDOM from "react-dom";
+import {LinkContainer} from "react-router-bootstrap";
 
 class Home extends Component {
 
@@ -89,10 +90,17 @@ class Home extends Component {
                         </div>
 
                         {this.state.boardLink.length > 0 ? (
-                            this.state.QRcode = window.location.href + "board?id=" + this.state.boardLink
+                            <div>
+                            <QRCode value={this.state.QRcode = window.location.href + "board?id=" + this.state.boardLink}/>
+
+                                <LinkContainer to={"board?id=" + this.state.boardLink}>
+                                    <a className="nav-link text-dark font-weight-bold">
+                                        {this.state.QRcode}
+                                    </a>
+                                </LinkContainer>
+                            </div>
                         ) : (null)}
 
-                        <QRCode value={this.state.QRcode}/>
                     </form>
                 </div>
 

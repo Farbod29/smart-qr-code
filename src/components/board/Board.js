@@ -73,7 +73,7 @@ class Board extends Component {
                 <Button variant="fab" color="primary" style={fab} >
 
                     <LinkContainer to="/">
-                        <a>
+                        <a className="text-white">
                             +
                         </a>
                     </LinkContainer>
