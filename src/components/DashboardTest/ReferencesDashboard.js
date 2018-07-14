@@ -99,7 +99,7 @@ class ReferencesDashboard extends Component {
 
 
         let cards = this.state.references.map((resource, index) =>
-            <ResourceCard key={index} url={resource.link} userPhoto={resource.user.photo}
+            <ResourceCard key={index} url={resource.link} userPhoto={StorageKeys.BASE_API_URL + resource.user.photo}
                           userEmail={resource.user.email} totalVotes={resource.totalVotes}
                           userVote={resource.isVotedByMe} referenceId={resource._id}/>
         );
