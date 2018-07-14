@@ -47,7 +47,7 @@ class LoginComponent extends Component {
                     let _photoURL = result.data.message.photo;
                     localStorage.setItem(StorageKeys.EMAIL, _email);
                     localStorage.setItem(StorageKeys.USER_ID, _userId);
-                    localStorage.setItem(StorageKeys.PHOTO_URL, _photoURL);
+                    localStorage.setItem(StorageKeys.PHOTO_URL, StorageKeys.BASE_API_URL + _photoURL);
 
                     this.props.history.push('/');
                 }
