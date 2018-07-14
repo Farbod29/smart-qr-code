@@ -7,7 +7,7 @@ import Login from "./components/Login/Login";
 import AddLink from "./components/AddLink/AddLink";
 import Settings from "./components/Settings/Settings";
 import Register from "./components/register/Register";
-import ForgotPasswor from "./components/ForgotPassword/ForgotPasswor";
+import ForgotPasswor from "./components/forgotPasswor/ForgotPasswor";
 import ReferenceCard from "./components/DashboardTest/ReferenceCard";
 import ReferencesDashboard from "./components/DashboardTest/ReferencesDashboard";
 import Home from "./components/Home/Home";
