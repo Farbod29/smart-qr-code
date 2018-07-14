@@ -5,15 +5,39 @@ import CardContent from "@material-ui/core/es/CardContent/CardContent";
 import Typography from "@material-ui/core/es/Typography/Typography";
 import CardActions from "@material-ui/core/es/CardActions/CardActions";
 import IconButton from "@material-ui/core/es/IconButton/IconButton";
-import {parseUrlData} from "../../utils/Connection";
+import {parseUrlData, voteData} from "../../utils/Connection";
 import NoImagePreview from '../../images/no-preview.jpg';
 import {GridLoader} from "react-spinners";
-import Pin from "./Pin";
-import UnPin from "./UnPin";
-
+import StorageKeys from "../../utils/StorageKeys";
 
 
 class ResourceCard extends Component {
+
+    togglePin = () => {
+        console.log("clicked on toggle");
+        const pinActive1 = this.state.pinActive;
+        this.setState({pinActive: !pinActive1});
+    };
+    onClickPlus = (event) => {
+        // this.setState({
+        //     count: this.state.count + 1
+        // });
+        this.setState({
+            isVotedUp: "text-dark",
+            isVotedDown: "text-black-50"
+        });
+        this.voteUp();
+    };
+    onClickMinus = (event) => {
+        // this.setState({
+        //     count: this.state.count - 1
+        // });
+        this.setState({
+            isVotedUp: "text-black-50",
+            isVotedDown: "text-dark"
+        });
+        this.voteDown()
+    };
 
     constructor(props) {
         super(props);
@@ -25,11 +49,15 @@ class ResourceCard extends Component {
             imgURL: "",
             url: props.url,
             pinActive: true,
-            count: 0,
-            userIdentification : true
-        };
-    }
+            count: props.totalVotes,
+            userIdentification: true,
 
+
+            isVotedUp: "text-black-50",
+            isVotedDown: "text-black-50",
+        };
+
+    }
 
     parseUrl(url) {
         parseUrlData(url).then((response) => {
@@ -44,25 +72,54 @@ class ResourceCard extends Component {
             });
         });
     }
-        togglePin = () => {
-        console.log("clicked on toggle");
-        const pinActive1 = this.state.pinActive;
-        this.setState({pinActive: !pinActive1});
-    };
-    onClickPlus=(event)=>{
-        this.setState({
-            count: this.state.count + 1
-        });
-    };
-    onClickMinus=(event)=>
-    {
-        this.setState({
-            count: this.state.count - 1
-        });
-    };
+
+    vote(value) {
+        let uid = "";
+        if (localStorage.getItem(StorageKeys.USER_ID) != null)
+            uid = localStorage.getItem(StorageKeys.USER_ID);
+        voteData(this.props.referenceId, uid, value)
+            .then((result) => {
+                console.log("status1: " + result);
+                if (result.status === 200) {
+                    this.setState({
+                        count: result.data.totalRate,
+                    });
+
+                }
+                else {
+
+                    console.log("status3: " + result);
+                }
+            })
+            .catch(error => {
+                console.log("status4: " + error);
+
+            });
+    }
+
+    voteUp() {
+        this.vote(1);
+    }
+
+    voteDown() {
+        this.vote(-1);
+    }
+
 
     componentDidMount() {
         this.parseUrl(this.state.url);
+        if (this.props.userVote > 0) {
+            this.setState({
+                isVotedUp: "text-dark",
+                isVotedDown: "text-black-50"
+            });
+        }
+        else if (this.props.userVote < 0) {
+            this.setState({
+                isVotedUp: "text-black-50",
+                isVotedDown: "text-dark"
+            });
+        }
     }
 
     render() {
@@ -86,26 +143,27 @@ class ResourceCard extends Component {
             finalImageURL = NoImagePreview;
         }
 
-        let pin = null;
-        if (this.state.PinActive) {
-            pin = (
-                <div>
-                    <Pin
-                        click={this.togglePin}
-                    />
-                </div>
-            );
-        }else
-        {
-            pin = (
-                <div>
-                    <UnPin
-                        click={this.togglePin}
-                    />
-                </div>
-                );
-        }
-        let Outh = null;
+
+        // let pin = null;
+        // if (this.state.PinActive) {
+        //     pin = (
+        //         <div>
+        //             <Pin
+        //                 click={this.togglePin}
+        //             />
+        //         </div>
+        //     );
+        // }else
+        // {
+        //     pin = (
+        //         <div>
+        //             <UnPin
+        //                 click={this.togglePin}
+        //             />
+        //         </div>
+        //         );
+        // }
+        // let Outh = null;
 
 
         return (
@@ -135,20 +193,27 @@ class ResourceCard extends Component {
                             {/*icons from: https://fontawesome.com/icons*/}
                             <CardActions>
                                 <IconButton aria-label="Add to favorites" onClick={this.onClickPlus.bind(this)}>
-                                    <i className="fas fa-angle-double-up text-dark"/>
+                                    <i className={"fas fa-angle-double-up " + this.state.isVotedUp}/>
                                 </IconButton>
                                 <label> {this.state.count} </label>
-                                <IconButton aria-label="Add to favorites" onClick={this.onClickMinus.bind(this)} >
-                                    <i className="fas fa-angle-double-down text-black-50"/>
+                                <IconButton aria-label="Add to favorites" onClick={this.onClickMinus.bind(this)}>
+                                    <i className={"fas fa-angle-double-down " + this.state.isVotedDown}/>
                                 </IconButton>
-                                <div>{pin}</div>
+
+                                <IconButton
+                                    className="ml-auto">
+                                    {/*<i className="fab fa-youtube"/>*/}
+                                    <img src={this.props.userPhoto} className="rounded-circle"
+                                         width="30px" title={this.props.userEmail}/>
+                                </IconButton>
+
                             </CardActions>
                         </Card>
                     </div>
                 ) : (
                     <div>
                         <Card style={card}>
-                            <div className="text-center" style={loader} >
+                            <div className="text-center" style={loader}>
                                 <GridLoader
                                     color={'#0098d3'}
                                     loading={true}

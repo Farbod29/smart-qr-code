@@ -51,6 +51,7 @@ class AddLink extends Component {
                         this.setState({
                             isRequesting: false,
                         });
+                        window.location.reload();
                     }
                     else {
                         this.setState({

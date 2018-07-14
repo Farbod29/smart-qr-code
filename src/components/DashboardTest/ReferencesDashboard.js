@@ -45,7 +45,11 @@ class ReferencesDashboard extends Component {
                 isRequesting: true
             });
             let initialReferences = [];
-            getBoardResourcesData(tagCode)
+
+            let uid = "";
+            if (localStorage.getItem(StorageKeys.USER_ID) != null)
+                uid = localStorage.getItem(StorageKeys.USER_ID);
+            getBoardResourcesData(tagCode, uid)
                 .then((result) => {
                     console.log("status1: " + result);
                     if (result.status === 200) {
@@ -54,8 +58,11 @@ class ReferencesDashboard extends Component {
                         });
                         this.setState({
                             isRequesting: false,
-                            references: initialReferences
+                            references: initialReferences.sort(this.compare.bind(this))
                         });
+                        // this.setState({
+                        // });
+
                         console.log("references url: >> " + initialReferences)
                     }
                     else {
@@ -73,8 +80,14 @@ class ReferencesDashboard extends Component {
                 });
         }
     }
-    // console.log("id >> " + this.props.match.params);
 
+    compare(a,b) {
+        if (a.totalVotes > b.totalVotes)
+            return -1;
+        if (a.totalVotes < b.totalVotes)
+            return 1;
+        return 0;
+    }
 
     render() {
         const fab = {
@@ -83,8 +96,11 @@ class ReferencesDashboard extends Component {
             right: 20,
         };
 
+
         let cards = this.state.references.map((resource, index) =>
-            <ResourceCard key={index} url={resource.link}/>
+            <ResourceCard key={index} url={resource.link} userPhoto={resource.user.photo}
+                          userEmail={resource.user.email} totalVotes={resource.totalVotes}
+                          userVote={resource.isVotedByMe} referenceId={resource._id}/>
         );
 
         return (
