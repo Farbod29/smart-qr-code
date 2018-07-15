@@ -12,30 +12,31 @@ import ReferenceCard from "./components/DashboardTest/ReferenceCard";
 import ReferencesDashboard from "./components/DashboardTest/ReferencesDashboard";
 import Home from "./components/Home/Home";
 import Board from "./components/board/Board";
+import QrScanner from "./QrScanner/QrScanner";
 
-class App extends Component {
+const App = () => {
 
-  render() {
-      return <div className="App">
-          <BrowserRouter>
-              <div className="sans-serif">
-                  <Route exact path="/" component={Home}/>  {/*this is a main entry .. we will change it later .. but i write it now to don't show a blank page in the start of the project*/}
-                  <Route path="/ForgotPassword" component={ForgotPassword}/>
-                  <Route path="/DashboardTest" component={ReferenceCard}/>
-                  <Route path="/board" component={ReferencesDashboard}/>
-                  <Route path="/board?id=:id" component={ReferencesDashboard}/>
-                  <Route path="/boards" component={Board}/>
-                  <Route path="/login" component={Login}/>
-                  <Route path="/AddLink" component={AddLink}/>
-                  <Route path="/settings" component={Settings}/>
-                  <Route path="/register" component={Register}/>
-              </div>
-          </BrowserRouter>
-      </div>;
-  }
-}
+      return (
+          <div className="App">
+              <BrowserRouter>
+                  <div className="sans-serif">
+                      <Route exact path="/" component={Home}/>
+                      <Route path="/ForgotPassword" component={ForgotPassword}/>
+                      <Route path="/DashboardTest" component={ReferenceCard}/>
+                      <Route path="/board" component={ReferencesDashboard}/>
+                      <Route path="/board?id=:id" component={ReferencesDashboard}/>
+                      <Route path="/boards" component={Board}/>
+                      <Route path="/login" component={Login}/>
+                      <Route path="/AddLink" component={AddLink}/>
+                      <Route path="/settings" component={Settings}/>
+                      <Route path="/register" component={Register}/>
+                      <Route path="/Qr-Scanner" component={QrScanner}/>
+                  </div>
+              </BrowserRouter>
+          </div>
+      );
+};
 
 export default App;
-
 
 
