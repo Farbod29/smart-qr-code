@@ -55,7 +55,8 @@ class Board extends Component {
 
                 <div className="row p-2">
 
-                    <QRCode className="col-4 m-2" value={window.location.href + "board?id=" + board.tagCode} logoWidth="100px"/>
+                    <QRCode className="col-4 m-2" value={window.location.href + "board?id=" + board.tagCode}
+                            logoWidth="100px"/>
 
                     <LinkContainer to={"/board?id=" + board.tagCode} className="col-7 vertical-center">
                         <a className="nav-link text-dark font-weight-bold ">
@@ -71,15 +72,14 @@ class Board extends Component {
 
                 <Header/>
 
-                <Button variant="fab" color="primary" style={fab} >
 
-                    <LinkContainer to="/">
+                <LinkContainer to="/">
+                    <Button variant="fab" color="primary" style={fab}>
                         <a className="text-white">
                             +
                         </a>
-                    </LinkContainer>
-
-                </Button>
+                    </Button>
+                </LinkContainer>
 
                 <div className="row">
                     {boardsCards}
