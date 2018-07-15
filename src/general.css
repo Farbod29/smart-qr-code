@@ -197,3 +197,8 @@ img.profile-picture {
 .dialog {
     width: 75%;
 }
+
+.vertical-center {
+    display: flex;
+    align-items: center;
+}

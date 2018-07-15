@@ -47,7 +47,7 @@ class LoginComponent extends Component {
                     let _photoURL = result.data.message.photo;
                     localStorage.setItem(StorageKeys.EMAIL, _email);
                     localStorage.setItem(StorageKeys.USER_ID, _userId);
-                    localStorage.setItem(StorageKeys.PHOTO_URL, _photoURL);
+                    localStorage.setItem(StorageKeys.PHOTO_URL, StorageKeys.BASE_API_URL + _photoURL);
 
                     this.props.history.push('/');
                 }
@@ -121,11 +121,11 @@ class LoginComponent extends Component {
                                Login
                             </Button>
                         </div>
-                        <LinkContainer to="/ForgotPassword" style={{ color: '#B22222' }}>
-                            <a>
-                                Forgot my password
-                            </a>
-                        </LinkContainer>
+                        {/*<LinkContainer to="/ForgotPassword" style={{ color: '#B22222' }}>*/}
+                            {/*<a>*/}
+                                {/*Forgot my password*/}
+                            {/*</a>*/}
+                        {/*</LinkContainer>*/}
                     <br/>
                         <LinkContainer to="/Register" style={{ color: '#3267b2' }}>
                             <a>

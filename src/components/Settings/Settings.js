@@ -9,7 +9,8 @@ import DialogContent from "@material-ui/core/es/DialogContent/DialogContent";
 import DialogActions from "@material-ui/core/es/DialogActions/DialogActions";
 import Slide from "@material-ui/core/es/Slide/Slide";
 import StorageKeys from "../../utils/StorageKeys";
-import {changePasswordData, loginData} from "../../utils/Connection";
+import {changePasswordData, loginData, uploadPhotoData} from "../../utils/Connection";
+import FileBase64 from 'react-file-base64';
 
 
 function Transition(props) {
@@ -29,6 +30,7 @@ class Settings extends Component {
             validating: false,
             validatingConfirmNewPass: false,
             isRequesting: false,
+            file: []
         };
     }
 
@@ -106,7 +108,30 @@ class Settings extends Component {
         event.preventDefault();
     }
 
+    getFiles(files){
+        this.setState({ file: files })
+        console.log(this.state.file)
+    }
 
+
+
+    uploadPhoto() {
+        uploadPhotoData(localStorage.getItem(StorageKeys.USER_ID), this.state.file.base64)
+            .then((result) => {
+                console.log("status1: " + result);
+                if (result.status === 200) {
+                    console.log("status2: ");
+                    localStorage.setItem(StorageKeys.PHOTO_URL, StorageKeys.BASE_API_URL + result.data.path);
+                    this.handleClose();
+                }
+                else {
+                    console.log("status3: " + result);
+                }
+            })
+            .catch(error => {
+                console.log("status4: " + error);
+            });
+    }
 
     render() {
 
@@ -125,14 +150,11 @@ class Settings extends Component {
                          style={profile_picture}
                          width={100} height={100}
                          src={localStorage.getItem(StorageKeys.PHOTO_URL)}/>
-                         {/*src={"https://sarahahstorage.blob.core.windows.net/files/cce0f00c-31b7-4caa-9bfa-5cf8fcef685e.jpg"}/>*/}
 
                     <h4 className="mt-3">
-                        SmartQRcode Group
+                        {localStorage.getItem(StorageKeys.EMAIL)}
                     </h4>
-                    <a href="#" className="text-primary font-weight-bold">
-                        xxx@stud.uni-due.de
-                    </a>
+
                     <TextField
                         id="oldPassword"
                         label="Old Password"
@@ -190,20 +212,18 @@ class Settings extends Component {
                         </DialogContentText>
 
                         <div className="input-group mt-2 ml-0 mr-0 p-0">
-                            <div className="input-group-prepend">
-                                <span className="input-group-text">Photo</span>
-                            </div>
+
                             <div className="custom-file">
-                                <input type="file" className="custom-file-input" id="inputGroupFile01"/>
-                                <label className="custom-file-label" htmlFor="inputGroupFile01">
-                                    Choose Photo
-                                </label>
+
+                                <FileBase64 type="file" className="custom-file-input" id="inputGroupFile01"
+                                    onDone={ this.getFiles.bind(this) } />
+
                             </div>
                         </div>
 
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={this.handleClose} color="primary">
+                        <Button onClick={this.uploadPhoto.bind(this)} color="primary">
                             Save
                         </Button>
                         <Button onClick={this.handleClose} color="secondary">
