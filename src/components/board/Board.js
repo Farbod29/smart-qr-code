@@ -73,8 +73,8 @@ class Board extends Component {
                 <Header/>
 
 
-                <LinkContainer to="/">
-                    <Button variant="fab" color="primary" style={fab}>
+                <LinkContainer to="/" style={fab}>
+                    <Button variant="fab" color="primary" >
                         <a className="text-white">
                             +
                         </a>
