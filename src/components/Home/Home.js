@@ -79,7 +79,7 @@ class Home extends Component {
                     </div>
 
                     {this.state.boardLink.length > 0 ? (
-                        this.state.QRcode = window.location.href + "board/" + this.state.boardLink
+                        this.state.QRcode = window.location.href + "board?id=" + this.state.boardLink
                     ) : (null)}
 
                     <QRCode value={this.state.QRcode}/>

@@ -38,14 +38,14 @@ class ReferencesDashboard extends Component {
 
     getResources() {
         if (this.props.location.search != null) {
-            this.props.location.search = this.props.location.search.slice(4);
-            console.log("id >> " + this.props.location.search);
+            var tagCode = this.props.location.search.slice(4);
+            console.log("id >> " + tagCode);
 
             this.setState({
                 isRequesting: true
             });
             let initialReferences = [];
-            getBoardResourcesData(this.props.match.params.id)
+            getBoardResourcesData(tagCode)
                 .then((result) => {
                     console.log("status1: " + result);
                     if (result.status === 200) {
@@ -107,7 +107,7 @@ class ReferencesDashboard extends Component {
                     aria-labelledby="form-dialog-title"
                     fullWidth="75%">
 
-                    <AddLink board={this.props.match.params.id} open={this.state.open} context={this}/>
+                    <AddLink board={this.props.location.search.slice(4)} open={this.state.open} context={this}/>
 
                 </Dialog>
 
