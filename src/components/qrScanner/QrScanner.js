@@ -34,7 +34,7 @@ class QrScanner extends Component {
     render() {
         const previewStyle = {
             height: 182,
-            width: 270,
+            width: 250,
             display: "inline",
             background: "#000000",
         };

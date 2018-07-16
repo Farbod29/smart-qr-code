@@ -66,7 +66,7 @@ class Home extends Component {
                 <div className="col-12 col-sm-6 registration-clean">
                     <form method="post"
                           onSubmit={this.createNewBoard.bind(this)}>
-                        <h2>Create New Qr-Board</h2>
+                        <h2>Create New Board</h2>
 
                         <div className="form-group">
                             <TextField
