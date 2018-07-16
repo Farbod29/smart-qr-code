@@ -35,19 +35,27 @@ class QrScanner extends Component {
         const previewStyle = {
             height: 182,
             width: 270,
+            display: "inline",
+            background: "#000000",
         };
         return (
             <div className={"App container text-center"}>
                 <Header/>
                  <br/><br/><br/><br/><br/>
-                 <QrReader
-                    delay={this.state.delay}
-                    style={previewStyle}
-                    onError={this.handleError}
-                    onScan={this.handleScan}
-                />
-                  <br/><br/><br/>
                 <div className="form-group">
+
+
+                    <QrReader
+                        className="text-center"
+                        delay={this.state.delay}
+                        style={previewStyle}
+                        onError={this.handleError}
+                        onScan={this.handleScan}
+                    />
+
+                    <br/><br/><br/>
+
+
                     <a href={this.state.result} style={{ color: '#3267b2' }}>
                         <Button variant="contained" color="primary" type="submit" disabled={!this.validateForm()}>
                            Open Board
