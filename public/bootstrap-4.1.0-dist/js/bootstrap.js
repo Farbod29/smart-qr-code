@@ -2429,7 +2429,7 @@
 
       var $target = $$$1(target).one(Event.SHOW, function (showEvent) {
         if (showEvent.isDefaultPrevented()) {
-          // Only registerx focus restorer if modal will actually get shown
+          // Only register focus restorer if modal will actually get shown
           return;
         }
 
@@ -3151,7 +3151,7 @@
       placement: 'right',
       trigger: 'click',
       content: '',
-      template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-headerx"></h3>' + '<div class="popover-body"></div></div>'
+      template: '<div class="popover" role="tooltip">' + '<div class="arrow"></div>' + '<h3 class="popover-header"></h3>' + '<div class="popover-body"></div></div>'
     });
 
     var DefaultType = _objectSpread({}, Tooltip.DefaultType, {
@@ -3163,7 +3163,7 @@
       SHOW: 'show'
     };
     var Selector = {
-      TITLE: '.popover-headerx',
+      TITLE: '.popover-header',
       CONTENT: '.popover-body'
     };
     var Event = {

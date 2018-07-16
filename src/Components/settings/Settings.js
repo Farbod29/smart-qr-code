@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Header from "../headerx/Header";
+import Header from "../header/Header";
 import TextField from "@material-ui/core/es/TextField/TextField";
 import Button from "@material-ui/core/es/Button/Button";
 import Dialog from "@material-ui/core/es/Dialog/Dialog";
@@ -72,7 +72,7 @@ class Settings extends Component {
 
     componentDidMount() {
         if (localStorage.getItem(StorageKeys.USER_ID) === null || localStorage.getItem(StorageKeys.USER_ID).length === 0 ){
-            this.props.history.push('/loginx');
+            this.props.history.push('/login');
         }
     }
 

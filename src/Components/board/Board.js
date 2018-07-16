@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Header from "../headerx/Header";
+import Header from "../header/Header";
 import Button from "@material-ui/core/es/Button/Button";
 import {getBoardsData} from "../../utils/Connection";
 import {LinkContainer} from "react-router-bootstrap";
@@ -55,10 +55,10 @@ class Board extends Component {
 
                 <div className="row p-2">
 
-                    <QRCode className="col-4 m-2" value={window.location.href + "boardx?id=" + board.tagCode}
+                    <QRCode className="col-4 m-2" value={window.location.href + "board?id=" + board.tagCode}
                             logoWidth="100px"/>
 
-                    <LinkContainer to={"/boardx?id=" + board.tagCode} className="col-7 vertical-center">
+                    <LinkContainer to={"/board?id=" + board.tagCode} className="col-7 vertical-center">
                         <a className="nav-link text-dark font-weight-bold ">
                             <h3>{board.title}</h3>
                         </a>
