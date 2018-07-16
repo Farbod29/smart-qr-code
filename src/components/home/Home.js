@@ -55,9 +55,12 @@ class Home extends Component {
             <div className="row vertical-center">
 
                 <div className="pl-5 col-12 col-sm-6">
-                    <p><h1 className="font-weight-bold" style={{color: "#a50111"}}>&lt;EXPAND&gt;</h1></p>
-                    <p><h2 className="font-weight-light" >your knowledge</h2></p>
-                    {/*<qrScanner />*/}
+                    {/*<p><h1 className="font-weight-bold" style={{color: "#a50111"}}>&lt;EXPAND&gt;</h1></p>*/}
+                    {/*<p><h2 className="font-weight-light" >your knowledge</h2></p>*/}
+
+
+                    <img src="../../../images/home.png"/>
+
 
                 </div>
                 <div className="col-12 col-sm-6 registration-clean">
