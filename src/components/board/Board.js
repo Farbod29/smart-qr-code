@@ -47,6 +47,7 @@ class Board extends Component {
             bottom: 20,
             right: 20,
             zIndex: 7,
+            backgroundColor: '#a50111',
         };
 
 
@@ -74,7 +75,7 @@ class Board extends Component {
 
 
                 <LinkContainer to="/" style={fab}>
-                    <Button variant="fab" color="primary" >
+                    <Button variant="fab" >
                         <a className="text-white">
                             +
                         </a>

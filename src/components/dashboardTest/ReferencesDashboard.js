@@ -95,6 +95,8 @@ class ReferencesDashboard extends Component {
             position: 'fixed',
             bottom: 20,
             right: 20,
+            backgroundColor: '#a50111',
+            color: "#ffffff",
         };
 
 
@@ -109,7 +111,7 @@ class ReferencesDashboard extends Component {
 
                 <Header/>
 
-                <Button variant="fab" color="primary" style={fab} onClick={this.handleClickOpen}>
+                <Button variant="fab"  style={fab} onClick={this.handleClickOpen}>
                     +
                 </Button>
 

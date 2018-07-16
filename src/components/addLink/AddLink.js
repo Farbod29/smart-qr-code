@@ -82,6 +82,11 @@ class AddLink extends Component {
 
 
     render() {
+
+        const fab = {
+            color: '#a50111',
+        };
+
         return (<div className="App">
 
                 {/*<Header/>*/}
@@ -114,7 +119,7 @@ class AddLink extends Component {
 
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={this.handleClose} color="secondary">
+                        <Button onClick={this.handleClose} style={fab}>
                             Cancel
                         </Button>
                         <Button onClick={this.addResource.bind(this)} color="primary" disabled={!this.validateForm()}>
