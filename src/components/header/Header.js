@@ -32,7 +32,7 @@ class Header extends Component {
                                 Smart Learning
                             </a>
                         </LinkContainer>
-                        <button className="navbar-toggler navbar-toggler-right"
+                        <button className="navbar-toggler custom-toggler navbar-toggler-right"
                                 type="button"
                                 data-toggle="collapse"
                                 data-target="#navbarToggleExternalContent">

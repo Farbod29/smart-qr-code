@@ -83,7 +83,7 @@ class LoginComponent extends Component {
                 <div className="login-clean">
                     <form onSubmit={this.login.bind(this)}>
                         <h2 className="sr-only">Login Form</h2>
-                        <div className="illustration"><i className="icon ion-log-in text-primary"/>
+                        <div className="illustration"><i className="icon ion-log-in" style={{color: "#a50111"}}/>
                         </div>
 
                         {this.state.errorMessage.length > 0 ? (
