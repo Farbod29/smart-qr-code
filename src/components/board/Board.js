@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Header from "../Header/Header";
+import Header from "../header/Header";
 import Button from "@material-ui/core/es/Button/Button";
 import {getBoardsData} from "../../utils/Connection";
 import {LinkContainer} from "react-router-bootstrap";

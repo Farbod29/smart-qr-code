@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import Header from "../Header/Header";
+import Header from "../header/Header";
 import ResourceCard from "./ResourceCard";
 import Button from "@material-ui/core/es/Button/Button";
 import Dialog from "@material-ui/core/es/Dialog/Dialog";
-import AddLink from "../AddLink/AddLink";
+import AddLink from "../addLink/AddLink";
 import {getBoardResourcesData} from "../../utils/Connection";
 import StorageKeys from "../../utils/StorageKeys";
 
