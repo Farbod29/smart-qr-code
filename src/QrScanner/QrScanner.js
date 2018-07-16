@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import QrReader from 'react-qr-scanner'
 import './QrScanner.css';
-import Header from "/Users/farbodaprin/Desktop/smartqr/src/components/Header/Header.js";
+import Header from "../components/Header/Header";
 
 class QrScanner extends Component {
     constructor(props) {
