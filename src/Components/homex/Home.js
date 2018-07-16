@@ -2,14 +2,14 @@
              import React, {Component} from 'react';
 import Button from "@material-ui/core/es/Button/Button";
 import TextField from "@material-ui/core/es/TextField/TextField";
-import Header from "../header/Header";
+import Header from "../headerx/Header";
 import {createNewBoardData} from "../../utils/Connection";
 import QRCode from "qrcode-react";
-// import qrScanner from "/Users/farbodaprin/Desktop/smartqr/src/qrScanner/qrScanner.js";
+// import qrScannerx from "/Users/farbodaprin/Desktop/smartqr/src/qrScannerx/qrScannerx.js";
 
 import ReactDOM from "react-dom";
 import {LinkContainer} from "react-router-bootstrap";
-import QrScanner from "../qrScanner/QrScanner";
+import QrScanner from "../qrScannerx/QrScanner";
 
 class Home extends Component {
 
@@ -62,7 +62,7 @@ class Home extends Component {
                 <div className="pl-5 col-12 col-sm-6">
                     <p><h1 className="font-weight-bold">&lt;EXPAND&gt;</h1></p>
                     <p><h2 className="font-weight-light">your knowledge</h2></p>
-                    {/*<qrScanner />*/}
+                    {/*<qrScannerx />*/}
 
                 </div>
                 <div className="col-12 col-sm-6 registration-clean">

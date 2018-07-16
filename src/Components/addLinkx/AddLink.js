@@ -38,7 +38,7 @@ class AddLink extends Component {
     addResource() {
 
         if (this.props.board != null) {
-            console.log("board id >> " + this.props.board);
+            console.log("boardx id >> " + this.props.board);
             let boardTagCode = this.props.board;
             this.setState({
                 isRequesting: true
