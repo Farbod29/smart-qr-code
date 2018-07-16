@@ -193,7 +193,7 @@ class ResourceCard extends Component {
                         <Card style={card}>
                             <div className="text-center" style={loader}>
                                 <GridLoader
-                                    color={'#0098d3'}
+                                    color={'#a50111'}
                                     loading={true}
                                 />
                             </div>
