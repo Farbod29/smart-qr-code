@@ -62,14 +62,46 @@ class ResourceCard extends Component {
     parseUrl(url) {
         parseUrlData(url).then((response) => {
             console.log("return from connection function: >>> " + response);
-            this.setState({
-                previewLinkData: response,
-                title: response.title,
-                disc: response.excerpt,
-                imgURL: response.lead_image_url,
-                url: response.url,
-                isUrlDataFetched: true,
-            });
+
+
+
+            if (response.status === 200) {
+                if (response.data.hasOwnProperty('title')){
+
+                    this.setState({
+                        previewLinkData: response.data,
+                        title: response.data.title,
+                        disc: response.data.excerpt,
+                        imgURL: response.data.lead_image_url,
+                        url: response.data.url,
+                        isUrlDataFetched: true,
+                    });
+                }
+                else {
+                    this.setState({
+                        previewLinkData: " -- ",
+                        title: "no title",
+                        disc: "no description",
+                        url: "error in url",
+                        isUrlDataFetched: true,
+                    });
+                }
+            }
+            else {
+
+                this.setState({
+                    previewLinkData: " -- ",
+                    title: "no title",
+                    disc: "no description",
+                    url: "error in url",
+                    isUrlDataFetched: true,
+                });
+
+
+            }
+
+
+
         });
     }
 
@@ -165,8 +197,12 @@ class ResourceCard extends Component {
                                     </Typography>
                                 </a>
                                 <label className="text-black-50 small font-weight-bold">
-                                    {this.state.previewLinkData.domain.toUpperCase()}
-                                </label>
+
+                                    { this.state.previewLinkData.hasOwnProperty('domain') ? (
+                                        this.state.previewLinkData.domain.toUpperCase()
+                                    ) : (null)}
+
+                                    </label>
                                 <Typography component="p">
                                     {this.state.disc.substr(0, 160)}
                                 </Typography>

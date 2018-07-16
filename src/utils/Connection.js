@@ -51,7 +51,7 @@ function parseUrlData(url) {
     return axios.get("https://mercury.postlight.com/parser?url=" + url, axiosConfig)
         .then(response => {
             console.log("response: " + JSON.stringify(response));
-            return response.data
+            return response
         })
         .catch(error => {
             console.log("error: " + error);
@@ -60,6 +60,7 @@ function parseUrlData(url) {
             console.log("error.statusText: " + error.statusText);
             console.log("error.headers: " + error.headers);
             console.log("error.config: " + error.config);
+            return error
         });
 }
 
