@@ -19,15 +19,16 @@ class Header extends Component {
 
     render() {
         const shadow = {
-            boxShadow: '1px 1px 5px rgba(0, 0, 0, .25)'
+            boxShadow: '1px 1px 5px rgba(0, 0, 0, .25)',
+            backgroundColor: '#a50111',
         };
 
         return (
             <div className="App">
-                <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top" style={shadow}>
+                <nav className="navbar navbar-expand-lg navbar-dark fixed-top" style={shadow}>
                     <div className="container mt-0">
                         <LinkContainer to="/">
-                            <a className="navbar-brand text-dark abs font-weight-bold" href="#">
+                            <a className="navbar-brand text-white abs font-weight-bold" href="#">
                                 Smart Learning
                             </a>
                         </LinkContainer>
@@ -39,30 +40,23 @@ class Header extends Component {
                         </button>
                         <div className="collapse navbar-collapse" id="navbarToggleExternalContent">
                             <ul className="navbar-nav ml-auto">
-                                {/*<li className="nav-item">*/}
-                                {/*<LinkContainer to="/Dashboard">*/}
-                                {/*<a className="nav-link text-primary font-weight-bold">*/}
-                                {/*Dashboard*/}
-                                {/*</a>*/}
-                                {/*</LinkContainer>*/}
-                                {/*</li>*/}
                                 <li className="nav-item">
                                     <LinkContainer to="/boards">
-                                        <a className="nav-link text-dark font-weight-bold">
+                                        <a className="nav-link text-white font-weight-bold">
                                             Boards
                                         </a>
                                     </LinkContainer>
                                 </li>
                                 <li className="nav-item ">
                                     <LinkContainer to="/Settings">
-                                        <a className="nav-link text-dark font-weight-bold">
+                                        <a className="nav-link text-white font-weight-bold">
                                             Settings
                                         </a>
                                     </LinkContainer>
                                 </li>
-                                <li className="nav-item ">
+                                <li className="nav-item " >
                                     <LinkContainer to="/Qr-Scanner">
-                                        <a className="nav-link text-dark font-weight-bold">
+                                        <a className="nav-link text-white font-weight-bold">
                                             Qr-Scanner
                                         </a>
                                     </LinkContainer>
@@ -71,7 +65,7 @@ class Header extends Component {
                                 {localStorage.getItem(StorageKeys.USER_ID) != null && localStorage.getItem(StorageKeys.USER_ID).length  > 0 ? (
                                     <li className="nav-item " onClick={this.logout.bind(this)}>
                                         <LinkContainer to="/" >
-                                            <a className="nav-link text-dark font-weight-bold">
+                                            <a className="nav-link text-white font-weight-bold">
                                                 Logout
                                             </a>
                                         </LinkContainer>
@@ -79,7 +73,7 @@ class Header extends Component {
                                 ) : (
                                     <li className="nav-item ">
                                         <LinkContainer to="/Login">
-                                            <a className="nav-link text-dark font-weight-bold">
+                                            <a className="nav-link text-white font-weight-bold">
                                                 Login
                                             </a>
                                         </LinkContainer>
