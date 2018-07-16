@@ -56,7 +56,7 @@ class Board extends Component {
 
                 <div className="row p-2">
 
-                    <QRCode className="col-4 m-2" value={window.location.href + "board?id=" + board.tagCode}
+                    <QRCode className="col-4 m-2" value={window.location.href.replace('boards', '') + "board?id=" + board.tagCode}
                             logoWidth="100px"/>
 
                     <LinkContainer to={"/board?id=" + board.tagCode} className="col-7 vertical-center">
