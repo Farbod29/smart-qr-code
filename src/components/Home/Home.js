@@ -5,8 +5,6 @@ import Header from "../Header/Header";
 import {createNewBoardData} from "../../utils/Connection";
 import QRCode from "qrcode-react";
 
-import ReactDOM from "react-dom";
-
 class Home extends Component {
 
     handleChange = event => {
@@ -27,6 +25,9 @@ class Home extends Component {
 
     validateForm() {
         return this.state.title.length > 0;
+    }
+    validateQRcode(){
+        return this.state.QRcode.length > 0;
     }
 
     createNewBoard(event) {
@@ -81,8 +82,9 @@ class Home extends Component {
                     {this.state.boardLink.length > 0 ? (
                         this.state.QRcode = window.location.href + "board/" + this.state.boardLink
                     ) : (null)}
-
-                    <QRCode value={this.state.QRcode}/>
+                    <div disabled={!this.validateQRcode()}>
+                    <QRCode value={this.state.QRcode} />
+                    </div>
                 </form>
             </div>
         </div>;
