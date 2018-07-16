@@ -1,7 +1,6 @@
 .centered {
     position: fixed; /* or absolute */
     top: 5%;
-    left: 40%;
 }
 .truncate {
     width: 415px;
