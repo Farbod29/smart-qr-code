@@ -31,8 +31,18 @@ class AddLink extends Component {
         };
     }
 
+
+     isUrlValid(userInput) {
+        var res = userInput.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+        if(res == null)
+            return false;
+        else
+            return true;
+    }
+
+
     validateForm() {
-        return /*this.state.titleReference.length > 0 &&*/ this.state.urlReference.length > 0;
+        return this.state.urlReference.length > 0 && this.isUrlValid(this.state.urlReference);
     }
 
     addResource() {
@@ -86,21 +96,7 @@ class AddLink extends Component {
 
 
                         <form method="post">
-                            {/*<p className="col-12">*/}
-                            {/*<h3 style={{color: "#0000FF"}}>Add new reference</h3>*/}
-                            {/*</p>*/}
-                            {/*<div className="form-group right">*/}
-                            {/*<TextField*/}
-                            {/*id="titleReference"*/}
-                            {/*label="Title of reference"*/}
-                            {/*placeholder="type title of reference"*/}
-                            {/*margin="normal"*/}
-                            {/*name="titleReference"*/}
-                            {/*value={this.state.titleReference}*/}
-                            {/*onChange={this.handleChange}*/}
-                            {/*className="form-control"*/}
-                            {/*/>*/}
-                            {/*</div>*/}
+
                             <div className="form-group right">
                                 <TextField
                                     id="urlReference"
@@ -118,7 +114,7 @@ class AddLink extends Component {
 
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={this.handleClose} color="primary">
+                        <Button onClick={this.handleClose} color="secondary">
                             Cancel
                         </Button>
                         <Button onClick={this.addResource.bind(this)} color="primary" disabled={!this.validateForm()}>
@@ -128,12 +124,6 @@ class AddLink extends Component {
 
                 </div>
 
-                {/*<div className="form-group add-link-btn">*/}
-                {/*<Button variant="fab" color="primary" disabled={!this.validateForm()}>*/}
-                {/*+*/}
-                {/*</Button>*/}
-                {/*<br/>*/}
-                {/*</div>*/}
             </div>
 
 

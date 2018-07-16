@@ -227,7 +227,7 @@ class Settings extends Component {
                             Save
                         </Button>
                         <Button onClick={this.handleClose} color="secondary">
-                            Remove
+                            Cancel
                         </Button>
                     </DialogActions>
                 </Dialog>
