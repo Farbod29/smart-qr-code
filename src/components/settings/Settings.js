@@ -137,6 +137,8 @@ class Settings extends Component {
 
         const profile_picture = {
             borderRadius: "100%",
+            width: "100px",
+            height: "100px",
         };
 
         const fab = {
@@ -152,7 +154,6 @@ class Settings extends Component {
                     <img onClick={this.handleClickOpen}
                          className="img-thumbnail profile-picture"
                          style={profile_picture}
-                         width={100} height={100}
                          src={localStorage.getItem(StorageKeys.PHOTO_URL)}/>
 
                     <h4 className="mt-3">
