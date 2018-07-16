@@ -57,7 +57,7 @@ class Header extends Component {
                                 <li className="nav-item " >
                                     <LinkContainer to="/Qr-Scanner">
                                         <a className="nav-link text-white font-weight-bold">
-                                            Qr-Scanner
+                                            QR-Scanner
                                         </a>
                                     </LinkContainer>
                                 </li>
