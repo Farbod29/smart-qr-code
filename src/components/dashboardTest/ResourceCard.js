@@ -143,7 +143,10 @@ class ResourceCard extends Component {
             finalImageURL = NoImagePreview;
         }
 
-
+        const profile_picture = {
+            width: "30px",
+            height: "30px",
+        };
         return (
             <div className="m-2 col-centered">
 
@@ -182,7 +185,8 @@ class ResourceCard extends Component {
                                     className="ml-auto">
                                     {/*<i className="fab fa-youtube"/>*/}
                                     <img src={this.props.userPhoto} className="rounded-circle"
-                                         width="30px" title={this.props.userEmail}/>
+                                         style={profile_picture}
+                                         title={this.props.userEmail}/>
                                 </IconButton>
 
                             </CardActions>
