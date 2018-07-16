@@ -102,7 +102,7 @@ class Register extends Component {
             <Header/>
             <div className="registration-clean">
                 <form onSubmit={this.register.bind(this)}>
-                    <h2 className="text-center" style={{color: "#0000FF"}}>Create Account</h2>
+                    <h2 className="text-center">Create Account</h2>
                     <div className="form-group">
                         <TextField
                             id="email"
