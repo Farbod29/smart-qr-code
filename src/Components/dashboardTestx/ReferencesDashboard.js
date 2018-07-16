@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import Header from "../header/Header";
+import Header from "../headerx/Header";
 import ResourceCard from "./ResourceCard";
 import Button from "@material-ui/core/es/Button/Button";
 import Dialog from "@material-ui/core/es/Dialog/Dialog";
-import AddLink from "../addLink/AddLink";
+import AddLink from "../addLinkx/AddLink";
 import {getBoardResourcesData} from "../../utils/Connection";
 import StorageKeys from "../../utils/StorageKeys";
 
@@ -15,7 +15,7 @@ class ReferencesDashboard extends Component {
         if (localStorage.getItem(StorageKeys.USER_ID) != null && localStorage.getItem(StorageKeys.USER_ID).length > 0) {
             this.setState({open: true});
         } else {
-            this.props.history.push('/login');
+            this.props.history.push('/loginx');
         }
 
     };
@@ -33,7 +33,7 @@ class ReferencesDashboard extends Component {
     }
 
     componentDidMount() {
-        console.log("mount a board");
+        console.log("mount a boardx");
         this.getResources();
     }
 
