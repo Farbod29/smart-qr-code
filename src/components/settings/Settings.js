@@ -139,6 +139,10 @@ class Settings extends Component {
             borderRadius: "100%",
         };
 
+        const fab = {
+            color: '#a50111',
+        };
+
         return (
             <div className="App container text-center">
 
@@ -226,8 +230,8 @@ class Settings extends Component {
                         <Button onClick={this.uploadPhoto.bind(this)} color="primary">
                             Save
                         </Button>
-                        <Button onClick={this.handleClose} color="secondary">
-                            Remove
+                        <Button onClick={this.handleClose} style={fab}>
+                            Cancel
                         </Button>
                     </DialogActions>
                 </Dialog>
