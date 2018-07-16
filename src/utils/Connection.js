@@ -1,24 +1,30 @@
 import axios from 'axios';
+import StorageKeys from "./StorageKeys";
 
 
 const LINK_PREVIEW = "http://api.linkpreview.net/?key=5b34416685a7ce81e7408aa64be981a91c4c742b33c57&q=";
-const BASE_API_URL = 'http://localhost:7000/';
+const BASE_API_URL = StorageKeys.BASE_API_URL;
 const CREATE_BOARD = BASE_API_URL + "boards/create";
 const BOARD = BASE_API_URL + "boards/";
 const CREATE_REFERENCE = BASE_API_URL + "references/create/";
 const LOGIN = BASE_API_URL + "users/login";
 const REGISTER = BASE_API_URL + "users/register";
 const CHANGE_PASSWORD = BASE_API_URL + "users/changePassword";
+const VOTE = BASE_API_URL + "votes/create";
+const UPLOAD_PHOTO = BASE_API_URL + "users/uploadPhoto";
 
 export {
     getLinkPreviewData,
     parseUrlData,
     createNewBoardData,
+    getBoardsData,
     getBoardResourcesData,
     addNewReferenceData,
     loginData,
     registerData,
-    changePasswordData
+    changePasswordData,
+    voteData,
+    uploadPhotoData
 };
 
 function getLinkPreviewData(url) {
@@ -79,9 +85,22 @@ function createNewBoardData(title) {
         });
 }
 
-function getBoardResourcesData(tagCode) {
+function getBoardResourcesData(tagCode, uid) {
 
-    return axios.get(BOARD + tagCode)
+    return axios.get(BOARD + tagCode + "/" + uid)
+        .then(response => {
+            console.log("response: " + JSON.stringify(response));
+            return response
+        })
+        .catch(error => {
+            console.log("error: " + JSON.stringify(error));
+            return error
+        });
+}
+
+function getBoardsData() {
+
+    return axios.get(BOARD )
         .then(response => {
             console.log("response: " + JSON.stringify(response));
             return response
@@ -185,3 +204,53 @@ function changePasswordData(userId, oldPassword, newPassword) {
             return error
         });
 }
+
+
+function voteData(referenceId, userId, value) {
+
+    let axiosConfig = {
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    };
+    var data = {
+        'referenceId': referenceId,
+        'userId': userId,
+        'value': value
+    };
+    return axios.post(VOTE, data, axiosConfig)
+        .then(response => {
+            console.log("response: " + JSON.stringify(response));
+            return response
+        })
+        .catch(error => {
+            console.log("error: " + JSON.stringify(error));
+            return error
+        });
+}
+
+
+function uploadPhotoData(userId, photo) {
+
+    let axiosConfig = {
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    };
+    var data = {
+        'userId': userId,
+        'photo': photo
+    };
+    return axios.post(UPLOAD_PHOTO, data, axiosConfig)
+        .then(response => {
+            console.log("response: " + JSON.stringify(response));
+            return response
+        })
+        .catch(error => {
+            console.log("error: " + JSON.stringify(error));
+            return error
+        });
+}
+
+
+

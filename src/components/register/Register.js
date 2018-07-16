@@ -5,7 +5,7 @@ import Header from "../Header/Header";
 import StorageKeys from "../../utils/StorageKeys";
 import {loginData, registerData} from "../../utils/Connection";
 
-class RegisterComponent extends Component {
+class Register extends Component {
 
     constructor(props) {
         super(props);
@@ -153,4 +153,4 @@ class RegisterComponent extends Component {
 }
 
 
-export default RegisterComponent;
+export default Register;

@@ -1,9 +1,15 @@
-import React, {Component} from 'react';
+
+             import React, {Component} from 'react';
 import Button from "@material-ui/core/es/Button/Button";
 import TextField from "@material-ui/core/es/TextField/TextField";
 import Header from "../Header/Header";
 import {createNewBoardData} from "../../utils/Connection";
 import QRCode from "qrcode-react";
+// import QrScanner from "/Users/farbodaprin/Desktop/smartqr/src/QrScanner/QrScanner.js";
+
+import ReactDOM from "react-dom";
+import {LinkContainer} from "react-router-bootstrap";
+import QrScanner from "../../QrScanner/QrScanner";
 
 class Home extends Component {
 
@@ -11,7 +17,7 @@ class Home extends Component {
         this.setState({
             [event.target.id]: event.target.value
         });
-    }
+    };
 
     constructor(props) {
         super(props);
@@ -25,9 +31,6 @@ class Home extends Component {
 
     validateForm() {
         return this.state.title.length > 0;
-    }
-    validateQRcode(){
-        return this.state.QRcode.length > 0;
     }
 
     createNewBoard(event) {
@@ -52,41 +55,55 @@ class Home extends Component {
     }
 
     render() {
-        return <div className="App">
-
-
+        return <div className="App container">
             <Header/>
-            <div className="login-clean">
-                <form method="post"
-                      onSubmit={this.createNewBoard.bind(this)}>
-                    <h2>Create New Board</h2>
+            <div className="row vertical-center">
 
-                    <div className="form-group">
-                        <TextField
-                            id="title"
-                            label="title"
-                            placeholder="type board title"
-                            name="title"
-                            value={this.state.email}
-                            onChange={this.handleChange}
-                            margin="normal"
-                            className="form-control"/>
-                    </div>
+                <div className="pl-5 col-12 col-sm-6">
+                    <p><h1 className="font-weight-bold">&lt;EXPAND&gt;</h1></p>
+                    <p><h2 className="font-weight-light">your knowledge</h2></p>
+                    {/*<QrScanner />*/}
 
-                    <div className="form-group">
-                        <Button variant="contained" color="primary" type="submit" disabled={!this.validateForm()}>
-                            Create
-                        </Button>
-                    </div>
+                </div>
+                <div className="col-12 col-sm-6 registration-clean">
+                    <form method="post"
+                          onSubmit={this.createNewBoard.bind(this)}>
+                        <h2>Create New Qr-Board</h2>
 
-                    {this.state.boardLink.length > 0 ? (
-                        this.state.QRcode = window.location.href + "board/" + this.state.boardLink
-                    ) : (null)}
-                    <div disabled={!this.validateQRcode()}>
-                    <QRCode value={this.state.QRcode} />
-                    </div>
-                </form>
+                        <div className="form-group">
+                            <TextField
+                                id="title"
+                                label="title"
+                                placeholder="type board title"
+                                name="title"
+                                value={this.state.email}
+                                onChange={this.handleChange}
+                                margin="normal"
+                                className="form-control"/>
+                        </div>
+
+                        <div className="form-group">
+                            <Button variant="contained" color="primary" type="submit" disabled={!this.validateForm()}>
+                                Create
+                            </Button>
+                        </div>
+
+                        {this.state.boardLink.length > 0 ? (
+                            <div>
+                            <QRCode value={this.state.QRcode = window.location.href + "board?id=" + this.state.boardLink}/>
+                                <LinkContainer to={"board?id=" + this.state.boardLink}>
+                                    <a className="nav-link text-dark font-weight-bold">
+                                        {this.state.QRcode}
+                                    </a>
+                                </LinkContainer>
+                            </div>
+                        ) : (null)}
+
+                    </form>
+                </div>
+
             </div>
+
         </div>;
     }
 }

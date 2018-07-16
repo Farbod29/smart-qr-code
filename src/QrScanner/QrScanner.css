@@ -1,0 +1,43 @@
+.centered {
+    position: fixed; /* or absolute */
+    top: 5%;
+    left: 40%;
+}
+.truncate {
+    width: 415px;
+    hight: 20 px;
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: white;
+    text-overflow: ellipsis;
+    text-shadow: #8a9c8a;
+    padding: 10px;
+    border: 2px solid #69b5ff;
+    border-radius: 12px;
+    margin-left: -52px;
+    margin-top: 52px;
+}
+.previewStyle
+{
+    margin-top: 92px;
+    display: block;
+    object-fit: contain;
+    height: 180px;
+    border-color: #69b5ff;
+    border: 7px solid #69b5ff;
+    background: #69b5ff;
+    width: 287px;
+    border-radius: 12px;
+
+}
+@media only screen and (max-width: 600px) {
+    .previewStyle
+    {
+        margin-left: -100px;
+    }
+    .truncate {
+        margin-left: -122px;
+        width: 315px;
+
+    }
+}

@@ -24,12 +24,11 @@ class Header extends Component {
 
         return (
             <div className="App">
-
                 <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top" style={shadow}>
                     <div className="container mt-0">
                         <LinkContainer to="/">
                             <a className="navbar-brand text-dark abs font-weight-bold" href="#">
-                                Smart QR-Code
+                                Smart Learning
                             </a>
                         </LinkContainer>
                         <button className="navbar-toggler navbar-toggler-right"
@@ -48,9 +47,9 @@ class Header extends Component {
                                 {/*</LinkContainer>*/}
                                 {/*</li>*/}
                                 <li className="nav-item">
-                                    <LinkContainer to="/board">
+                                    <LinkContainer to="/boards">
                                         <a className="nav-link text-dark font-weight-bold">
-                                            Dashboard
+                                            Boards
                                         </a>
                                     </LinkContainer>
                                 </li>
@@ -58,6 +57,13 @@ class Header extends Component {
                                     <LinkContainer to="/Settings">
                                         <a className="nav-link text-dark font-weight-bold">
                                             Settings
+                                        </a>
+                                    </LinkContainer>
+                                </li>
+                                <li className="nav-item ">
+                                    <LinkContainer to="/Qr-Scanner">
+                                        <a className="nav-link text-dark font-weight-bold">
+                                            Qr-Scanner
                                         </a>
                                     </LinkContainer>
                                 </li>
