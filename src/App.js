@@ -5,16 +5,16 @@ import React, { Component } from 'react';
 import './App.css';
 import {BrowserRouter, Route} from "react-router-dom";
 import './general.css';
-import Login from "./components/Login/Login";
-import AddLink from "./components/AddLink/AddLink";
-import Settings from "./components/Settings/Settings";
-import ReferenceCard from "./components/DashboardTest/ReferenceCard";
-import ReferencesDashboard from "./components/DashboardTest/ReferencesDashboard";
-import Home from "./components/Home/Home";
+import Login from "./components/login/Login";
+import AddLink from "./components/addLink/AddLink";
+import Settings from "./components/settings/Settings";
+import ReferenceCard from "./components/dashboardTest/ReferenceCard";
+import ReferencesDashboard from "./components/dashboardTest/ReferencesDashboard";
+import Home from "./components/home/Home";
 import Board from "./components/board/Board";
-import QrScanner from "./QrScanner/QrScanner";
+import QrScanner from "./components/qrScanner/QrScanner";
 import ForgotPassword from "./components/forgotPassword/ForgotPassword";
-import Register from "./components/Register/Register";
+import Register from "./components/register/Register";
 
 const App = () => {
 
