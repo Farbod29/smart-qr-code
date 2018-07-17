@@ -1,6 +1,6 @@
 # Smart Learning
 
-![7869825b-da58-48db-8d51-2572b676dd5c](https://raw.githubusercontent.com/Farbod29/smart-qr-code/master/public/images/home.png)
+![Smart Learning logo](https://raw.githubusercontent.com/Farbod29/smart-qr-code/master/public/images/home.png)
 
 ## How to run
 
@@ -25,7 +25,7 @@ Students face a lot of problems while preparing for exams and always looking for
 
 
 ##Technical Architecture
-![7869825b-da58-48db-8d51-2572b676dd5c](https://raw.githubusercontent.com/Farbod29/smart-qr-code/master/public/images/home.png)
+![Technical Architecture](https://raw.githubusercontent.com/Farbod29/smart-qr-code/master/public/images/arch.PNG)
 
 
 
