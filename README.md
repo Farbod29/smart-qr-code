@@ -2,7 +2,7 @@
 
 ![Smart Learning logo](https://raw.githubusercontent.com/Farbod29/smart-qr-code/master/public/images/home.png)
 
-### How to run
+## How to run
 
 ```git clone git@github.com:Farbod29/smart-qr-code.git ```
 
@@ -16,7 +16,7 @@ to start the project on localhost
 Students face a lot of problems while preparing for exams and always looking for some helping material at the later stages, so we came up with this idea to provide the student a common platform by just scanning our QR code app and get easy access to the learning material of there need
 
 
-##Features
+## Features
 - Create Board.
 - Add Reference (as card).
 - Voting. 
@@ -24,11 +24,11 @@ Students face a lot of problems while preparing for exams and always looking for
 - Login, Registration, Change Password, Upload Photo.
 
 
-##Technical Architecture
+## Technical Architecture
 ![Technical Architecture](https://raw.githubusercontent.com/Farbod29/smart-qr-code/master/public/images/arch.PNG)
 
 
-##Technologies Used
+## Technologies Used
 - [ReactJS](https://reactjs.org/)
 - [MongoDb](https://www.mongodb.com/)
 - [Heroku](https://www.heroku.com/)
