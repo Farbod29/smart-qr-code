@@ -4,7 +4,7 @@
 
 ## How to run
 
-```git clone git@github.com:Farbod29/smart-qr-code.git ```
+```git clone https://github.com/Farbod29/smart-qr-code.git ```
 
 ```npm install ```
 
