@@ -28,12 +28,21 @@ Students face a lot of problems while preparing for exams and always looking for
 ![Technical Architecture](https://raw.githubusercontent.com/Farbod29/smart-qr-code/master/public/images/arch.PNG)
 
 
-
 ##Technologies Used
 - [ReactJS](https://reactjs.org/)
 - [MongoDb](https://www.mongodb.com/)
 - [Heroku](https://www.heroku.com/)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 - [Node.js Express](https://expressjs.com/)
+
+
+
+This project is the final project of our group for **Advanced Web Technologies** course
+in **Duisburg Essen University**
+
+
+
+<img src="https://www.uni-due.de/imperia/md/images/cms/ude-logo_en.png" height="70">
+<img src="https://www.uni-due.de/imperia/md/images/soco/soco-logo-detailed.png" height="70">
 
 
