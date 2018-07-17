@@ -2,7 +2,7 @@
 
 ![Smart Learning logo](https://raw.githubusercontent.com/Farbod29/smart-qr-code/master/public/images/home.png)
 
-## How to run
+### How to run
 
 ```git clone git@github.com:Farbod29/smart-qr-code.git ```
 
