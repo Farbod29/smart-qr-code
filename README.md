@@ -34,6 +34,7 @@ Basically once the QR-Code is scanned all the relevant data according to that QR
 
 
 ## Group Name and Members
+**Smart QR Code** Group:
 - [Hasan Mhd Amin](https://github.com/HasanMhdAmin)
 - [Mhd Yazan Al Zaeem](https://github.com/YazanZaim)
 - [Farbod Aprin](https://github.com/Farbod29)
